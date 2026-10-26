@@ -1744,25 +1744,25 @@
                         <span class="nav-icon">🎯</span>
                         <span class="nav-label">Watchlist Targets</span>
                     </button>
-                    <button class="btn btn-ghost-cyber" id="tabQaSecurityHub" disabled style="display: none;"
+                    <button class="btn btn-ghost-cyber" id="tabQaSecurityHub" disabled style="display: none !important;"
                         onclick="App.switchMainView('security')" title="Security Hub (Disabled)" data-tooltip="Security Hub (Disabled)">
                         <span class="nav-icon">🛡️</span>
                         <span class="nav-label">Security Hub</span>
                     </button>
 
                     <!-- Group Operations: Sync Tools Dropdown -->
-                    <div class="nav-dropdown" id="syncToolsQaDropdown">
-                        <button class="btn btn-ghost-cyber nav-dropdown-trigger" id="tabQaSyncTools" title="Sync Tools" data-tooltip="Sync Tools" aria-haspopup="true" aria-expanded="false">
+                    <div class="nav-dropdown" id="syncToolsQaDropdown" style="display: none !important;">
+                        <button class="btn btn-ghost-cyber nav-dropdown-trigger" id="tabQaSyncTools" disabled style="display: none !important;" title="Sync Tools" data-tooltip="Sync Tools" aria-haspopup="true" aria-expanded="false">
                             <span class="nav-icon">⚡</span>
                             <span class="nav-label">Sync Tools</span>
                             <span class="dropdown-caret">▾</span>
                         </button>
                         <div class="nav-dropdown-menu" id="syncToolsQaMenu" role="menu">
-                            <button class="dropdown-item item-accent-cyan" id="btnQuickSyncTrigger" disabled style="display: none;" title="Execute Two-Way SSH rsync & State Sync (Disabled)" role="menuitem">
+                            <button class="dropdown-item item-accent-cyan" id="btnQuickSyncTrigger" disabled style="display: none !important;" title="Execute Two-Way SSH rsync & State Sync (Disabled)" role="menuitem">
                                 <span class="item-icon">⚡</span>
                                 <span class="item-text">Sync Files</span>
                             </button>
-                            <button class="dropdown-item" id="btnToggleQaHeader" title="Toggle header for sync testing" role="menuitem">
+                            <button class="dropdown-item" id="btnToggleQaHeader" disabled style="display: none !important;" title="Toggle header for sync testing" role="menuitem">
                                 <span class="item-icon">✏️</span>
                                 <span class="item-text" id="btnToggleQaHeaderText">Bantay-aso</span>
                             </button>

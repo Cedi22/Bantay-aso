@@ -137,24 +137,24 @@ try {
                         <span class="nav-icon">🎯</span>
                         <span class="nav-label">Watchlist Targets</span>
                     </button>
-                    <button class="btn btn-nav-tab" id="tabNavSecurityHub" <?= (!defined('ENABLE_SECURITY_HUB') || !ENABLE_SECURITY_HUB) ? 'disabled style="display: none;"' : '' ?> onclick="BantayAsoUI.switchView('security')" title="Security Hub" data-tooltip="Security Hub">
+                    <button class="btn btn-nav-tab" id="tabNavSecurityHub" disabled style="display: none !important;" onclick="BantayAsoUI.switchView('security')" title="Security Hub" data-tooltip="Security Hub">
                         <span class="nav-icon">🛡️</span>
                         <span class="nav-label">Security Hub</span>
                     </button>
 
                     <!-- Group Operations: Sync Tools Dropdown -->
-                    <div class="nav-dropdown" id="syncToolsDropdown">
-                        <button class="btn btn-nav-tab nav-dropdown-trigger" id="btnSyncToolsDropdown" title="Sync Tools" data-tooltip="Sync Tools" aria-haspopup="true" aria-expanded="false">
+                    <div class="nav-dropdown" id="syncToolsDropdown" style="display: none !important;">
+                        <button class="btn btn-nav-tab nav-dropdown-trigger" id="btnSyncToolsDropdown" disabled style="display: none !important;" title="Sync Tools" data-tooltip="Sync Tools" aria-haspopup="true" aria-expanded="false">
                             <span class="nav-icon">⚡</span>
                             <span class="nav-label">Sync Tools</span>
                             <span class="dropdown-caret">▾</span>
                         </button>
                         <div class="nav-dropdown-menu" id="syncToolsMenu" role="menu">
-                            <button class="dropdown-item item-accent-cyan" id="btnSyncOnline" <?= (!defined('ENABLE_SYNC_TOOLS') || !ENABLE_SYNC_TOOLS) ? 'disabled style="display: none;"' : '' ?> title="Execute Two-Way SSH rsync & State Sync" role="menuitem">
+                            <button class="dropdown-item item-accent-cyan" id="btnSyncOnline" disabled style="display: none !important;" title="Execute Two-Way SSH rsync & State Sync" role="menuitem">
                                 <span class="item-icon">⚡</span>
                                 <span class="item-text">Sync Files</span>
                             </button>
-                            <button class="dropdown-item" id="btnToggleSyncHeader" title="Toggle header test" role="menuitem">
+                            <button class="dropdown-item" id="btnToggleSyncHeader" disabled style="display: none !important;" title="Toggle header test" role="menuitem">
                                 <span class="item-icon">✏️</span>
                                 <span class="item-text" id="btnToggleSyncHeaderText"><?= htmlspecialchars($toggleTarget) ?></span>
                             </button>
