@@ -1,0 +1,200 @@
+====================================================================================================
+                        QUALITY ASSURANCE AUDIT REPORT: UX & UI EVALUATION
+====================================================================================================
+  Target Application : S3curity H3LIX Enterprise Human Capital Management Portal
+  Target URL         : https://hrms-dev.s3curity.net/
+  Audited Account    : cedi (Cedric Regis JR — Super Administrator)
+  Audit Date         : October 12, 2026
+  Scope Evaluated    : 28 Portal Views, Design System (helix.css), Client Engine (helix.js),
+                       WCAG 2.1 AA Compliance, Viewport Scaling, and Information Architecture
+====================================================================================================
+
+┌──────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 1. EXECUTIVE SUMMARY & SCORECARD                                                                 │
+└──────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+  OVERALL UX/UI RATING: [ 81 / 100 ] — Strong Foundation with Critical Usability Friction
+
+  A comprehensive Quality Assurance evaluation was conducted on S3curity H3LIX. The portal displays
+  a mature, cohesive dark cybersecurity aesthetic, structured 8pt spacing rhythm, and clean vanilla
+  ES6 behavior. However, the audit revealed two critical workflow obstacles in core employee
+  management and navigation, alongside high-value accessibility and layout opportunities.
+
+  ┌──────────────────────────────────────────────┬──────────┬──────────────────────────────────────┐
+  │ EVALUATION CATEGORY                          │ SCORE    │ BENCHMARK RATING                     │
+  ├──────────────────────────────────────────────┼──────────┼──────────────────────────────────────┤
+  │ Visual Design & Aesthetic Consistency        │ 90 / 100 │ Excellent — Cohesive dark palette    │
+  │ Information Architecture & Scannability      │ 82 / 100 │ Good — Clear grouping; dead-ends     │
+  │ Accessibility Compliance (WCAG 2.1 AA)       │ 80 / 100 │ Good — Strong contrast; label gaps   │
+  │ Responsive Layout & Viewport Scaling         │ 79 / 100 │ Good — Responsive drawer; dense grids│
+  │ Forms, Inputs & Data Entry Ergonomics        │ 74 / 100 │ Needs Work — Manual ISO-2 code entry │
+  └──────────────────────────────────────────────┴──────────┴──────────────────────────────────────┘
+
+
+┌──────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 2. DEFECTS & ISSUES SUMMARY MATRIX                                                               │
+└──────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+  ┌─────────┬──────────┬─────────────────────────────┬─────────────────────────────────────────────┐
+  │ ID      │ SEVERITY │ MODULE / LOCATION           │ SUMMARY FINDING                             │
+  ├─────────┼──────────┼─────────────────────────────┼─────────────────────────────────────────────┤
+  │ UX-01   │ CRITICAL │ Navigation (Me Section)     │ 403 Dead-End for Unlinked Admin Accounts    │
+  │ UX-02   │ CRITICAL │ Employees (Add Employee)    │ Manual 2-Letter ISO-2 Code Entry for Country│
+  │ UX-03   │ MAJOR    │ Global Engine (helix.js)    │ Destructive Actions use Native Alert Dialogs│
+  │ UX-04   │ MAJOR    │ Topbar Utility Header       │ Loose Action Buttons instead of User Profile│
+  │ UX-05   │ MAJOR    │ Tables (Leaves, Attendance) │ Empty States lack Direct Primary Actions    │
+  │ A11Y-01 │ MAJOR    │ Form Controls (Filters)     │ Checkboxes Missing Explicit Label Tags      │
+  └─────────┴──────────┴─────────────────────────────┴─────────────────────────────────────────────┘
+
+
+┌──────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 3. DEEP-DIVE FINDINGS & ACTIONABLE SPECIFICATIONS                                                │
+└──────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+  [CRITICAL DEFECT UX-01] : 403 DEAD-END ON UNLINKED SUPER ADMINISTRATOR
+  ───────────────────────────────────────────────────────────────────────────────────────────────
+  • Location : Left Sidebar Navigation -> "Me" Group (/me, /me/documents, /me/training, etc.)
+  • Observation :
+    When user "cedi" (logged in as Super Administrator) clicks on 7 of the 10 self-service
+    links in the sidebar, the server returns an unhandled HTTP 403 Forbidden page:
+    "403 — Your account is not linked to an employee record. Ask your administrator to link it."
+  • UX Friction :
+    1. The user IS the administrator; advising them to "ask your administrator" is circular.
+    2. Primary navigation should never lead directly into hard HTTP 403 error screens.
+  • Recommended Solution :
+    1. Check employee profile link status on session creation.
+    2. If unlinked, either hide the self-service group or display a "(Not Linked)" badge.
+    3. Replace the raw 403 page with an in-app banner offering a 1-click "Link Account" wizard.
+
+  [CRITICAL DEFECT UX-02] : MANUAL ISO-2 NATIONALITY DATA ENTRY
+  ───────────────────────────────────────────────────────────────────────────────────────────────
+  • Location : Add Employee Form (/employees/create) -> Nationality Field
+  • Observation :
+    The field is rendered as a raw 2-character text input:
+    <input class="hx-input" type="text" name="nationality" maxlength="2" value="QA">
+  • UX Friction :
+    HR staff are required to know 2-letter ISO 3166-1 alpha-2 codes. Users attempting to type
+    "Qatar" or "Philippines" get cut off at "Qa" or "Ph", leading to failed submissions.
+  • Recommended Solution :
+    Replace the text field with a searchable select dropdown containing full country names and
+    flags (e.g., "Qatar (QA)", "Philippines (PH)", "India (IN)").
+
+  [MAJOR DEFECT UX-03] : DESTRUCTIVE ACTIONS USE NATIVE BROWSER CONFIRMATION
+  ───────────────────────────────────────────────────────────────────────────────────────────────
+  • Location : Global Client Interactions (helix.js line 44)
+  • Observation :
+    Destructive actions execute window.confirm(el.dataset.hxConfirm).
+  • UX Friction :
+    Native browser dialogs freeze the thread, look inconsistent across operating systems, and
+    cannot be styled to match the dark cybersecurity theme.
+  • Recommended Solution :
+    Replace window.confirm with an accessible modal dialog containing styled "Confirm" (red)
+    and "Cancel" (ghost) buttons.
+
+  [MAJOR DEFECT UX-04] : MISSING USER PROFILE DROPDOWN MENU
+  ───────────────────────────────────────────────────────────────────────────────────────────────
+  • Location : Header Utility Bar (hx-topbar)
+  • Observation :
+    The top bar renders flat ghost buttons in a row: Language, Notifications, 2FA setup, Logout.
+  • UX Friction :
+    No visual display of the active user's identity or avatar. 2FA setup text creates visual
+    crowding on tablet viewports.
+  • Recommended Solution :
+    Consolidate utility controls into a single User Profile Dropdown menu in the top-right:
+    [ Cedric Regis JR ▾ ] -> Super Administrator | 2FA (Off) | Language | Sign Out.
+
+  [MAJOR DEFECT UX-05] : PASSIVE EMPTY STATES WITHOUT DIRECT CALL-TO-ACTION
+  ───────────────────────────────────────────────────────────────────────────────────────────────
+  • Location : Tables with Zero Records (/leave, /attendance, /approvals, /assets)
+  • Observation :
+    Empty states display explanatory copy (e.g., "No leave requests found") but provide no
+    button inside the card.
+  • UX Friction :
+    Forces users to scan away from the content area to locate the header action button.
+  • Recommended Solution :
+    Add a prominent "+ Create / Apply" button directly inside every empty-state container.
+
+
+┌──────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 4. ACCESSIBILITY (WCAG 2.1 AA) & RESPONSIVE COMPLIANCE                                           │
+└──────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+  • Form Input Labeling : Checkboxes in Attendance, Recruitment, and Training lack explicit
+    for/id label bindings. Screen readers cannot properly announce field purposes.
+  • Mobile Drawer Trapping : When the sidebar drawer opens on screens < 960px, keyboard focus
+    is not trapped within the drawer, allowing users to tab behind the overlay.
+  • Contrast Verification : The brand palette achieves strong contrast ratios (>8:1 for body
+    text and headings). Accent violet (#B55CDB) should be slightly brightened to #C776EC on
+    secondary surfaces to maintain full WCAG AA compliance.
+  • Viewport Scaling :
+    - Desktop (1280px+)  : Excellent. Balanced cards, clear tables, and generous spacing.
+    - Tablet (768px-960px): Good. Navigation collapses cleanly into a hamburger drawer.
+    - Mobile (<480px)    : Adequate. Multi-column tables require horizontal scrolling;
+                           transforming records into card stacks will significantly boost UX.
+
+
+====================================================================================================
+                        5. SEPARATE IMPLEMENTATION ROADMAP & ACTION PLAN
+====================================================================================================
+
+  The following roadmap organizes all corrective actions into three distinct, structured phases:
+
+  ┌───────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ PHASE 1 : IMMEDIATE CRITICAL PATH (Days 1 — 3)                                                │
+  │ Focus: Resolve workflow dead-ends and critical data-entry friction                            │
+  ├───────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ [1.1] Fix Self-Service 403 Dead-End                                                           │
+  │       • Verify account employee linkage prior to rendering self-service navigation links.     │
+  │       • Prevent standalone administrators from encountering unhandled 403 error pages.        │
+  │                                                                                               │
+  │ [1.2] Upgrade Nationality Data Entry                                                          │
+  │       • Replace manual 2-letter ISO input with a searchable country dropdown.                │
+  │       • Support typeahead search and display full country names.                              │
+  └───────────────────────────────────────────────────────────────────────────────────────────────┘
+
+  ┌───────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ PHASE 2 : ACCESSIBILITY & ERGONOMICS (Days 4 — 7)                                             │
+  │ Focus: WCAG 2.1 AA compliance and interaction modernization                                   │
+  ├───────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ [2.1] Programmatic Form Labels                                                                │
+  │       • Add explicit label associations to all filter toggles and checkboxes.                 │
+  │                                                                                               │
+  │ [2.2] Mobile Drawer Keyboard Focus Trap                                                       │
+  │       • Trap keyboard focus inside the sidebar drawer when open; restore focus on close.      │
+  │                                                                                               │
+  │ [2.3] Accessible Custom Confirmation Modal                                                    │
+  │       • Deprecate native window.confirm() in favor of a styled accessible dialog.             │
+  └───────────────────────────────────────────────────────────────────────────────────────────────┘
+
+  ┌───────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ PHASE 3 : UI MODERNIZATION & POLISH (Days 8 — 12)                                             │
+  │ Focus: Navigation elegance, empty-state acceleration, and mobile optimization                 │
+  ├───────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ [3.1] Unified User Profile Dropdown                                                           │
+  │       • Consolidate loose header utility buttons into a modern avatar dropdown menu.          │
+  │                                                                                               │
+  │ [3.2] Actionable Empty States                                                                 │
+  │       • Integrate primary CTA buttons directly inside zero-record containers.                 │
+  │                                                                                               │
+  │ [3.3] Mobile Card-Stack Table Transformation                                                  │
+  │       • Transform wide data grids into mobile-friendly stacked cards on screens < 480px.      │
+  └───────────────────────────────────────────────────────────────────────────────────────────────┘
+
+====================================================================================================
+  VISUAL TIMELINE GANTT OVERVIEW:
+====================================================================================================
+
+  TASK                                  D1  D2  D3  D4  D5  D6  D7  D8  D9  D10 D11 D12
+  ────────────────────────────────────  ───────────────────────────────────────────────
+  Phase 1.1: Fix 403 Dead-Ends          [=====]
+  Phase 1.2: Upgrade Nationality Input      [=====]
+  Phase 2.1: Fix Form Labels                    [=====]
+  Phase 2.2: Mobile Focus Trapping                  [=====]
+  Phase 2.3: Custom Confirm Modal                       [=====]
+  Phase 3.1: Profile Dropdown Menu                          [=====]
+  Phase 3.2: Actionable Empty States                            [=====]
+  Phase 3.3: Mobile Table Card Stacks                               [==========]
+
+====================================================================================================
+                          End of Quality Assurance Audit Report
+====================================================================================================

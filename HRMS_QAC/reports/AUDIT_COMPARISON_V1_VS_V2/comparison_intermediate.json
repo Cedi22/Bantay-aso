@@ -1,0 +1,182 @@
+{
+  "ux_01": {
+    "v1": "403 Forbidden with message 'Your account is not linked to an employee record. Ask your administrator to link it.'",
+    "v2_title": "My workspace · S3curity H3LIX",
+    "v2_alerts": [],
+    "v2_has_link_wizard": true,
+    "v2_raw_snippet": [
+      "<a class=\"hx-nav__link\" href=\"/employees\">Employees</a>"
+    ]
+  },
+  "v2_team.html": {
+    "title": "My team · S3curity H3LIX",
+    "alerts": [],
+    "empties": [
+      "<div class=\"hx-empty\"><p class=\"hx-empty__text\">No direct reports are assigned to you.</p></div>",
+      "<div class=\"hx-empty\"><p class=\"hx-empty__text\">No upcoming leave in your team.</p></div>"
+    ]
+  },
+  "v2_attendance_me.html": {
+    "title": "My attendance · S3curity H3LIX",
+    "alerts": [],
+    "empties": [
+      "<div class=\"hx-empty\"><p class=\"hx-empty__title\">No attendance records yet</p></div>"
+    ]
+  },
+  "v2_me_documents.html": {
+    "title": "My documents · S3curity H3LIX",
+    "alerts": [],
+    "empties": [
+      "<div class=\"hx-empty\"><p class=\"hx-empty__text\">No documents uploaded yet.</p></div>",
+      "<div class=\"hx-empty\"><p class=\"hx-empty__text\">No contracts registered yet.</p></div>"
+    ]
+  },
+  "v2_me_training.html": {
+    "title": "My training · S3curity H3LIX",
+    "alerts": [],
+    "empties": [
+      "<div class=\"hx-empty\"><p class=\"hx-empty__text\">No training assigned.</p></div>"
+    ]
+  },
+  "ux_02": {
+    "v1_field": [
+      "<input class=\"hx-input\" type=\"text\" id=\"f_nationality\" name=\"nationality\" maxlength=\"2\" value=\"QA\">"
+    ],
+    "v2_field": [
+      "<input class=\"hx-input\" type=\"text\" id=\"f_nationality\" name=\"nationality\" maxlength=\"2\" value=\"QA\">"
+    ],
+    "v2_surrounding": "<div class=\"hx-form__row\"><div class=\"hx-field\"><label class=\"hx-label\" for=\"f_nationality\">Nationality (ISO 2)</label><input class=\"hx-input\" type=\"text\" id=\"f_nationality\" name=\"nationality\" maxlength=\"2\" value=\"QA\"></div><div class=\"hx-field\"><label class=\"hx-label\" for=\"f_national_id\">National ID</label><input class=\"hx-input\" type=\"text\" id=\"f_national_id\" name=\"national_id\" maxlength=\"40\" value=\"\"></div></div>"
+  },
+  "ux_03": {
+    "v1_confirm": [
+      "// Confirmation for destructive actions",
+      "const el = event.target.closest('[data-hx-confirm]');",
+      "if (el && !window.confirm(el.dataset.hxConfirm)) {"
+    ],
+    "v2_confirm": [
+      "// Confirmation for destructive actions",
+      "const el = event.target.closest('[data-hx-confirm]');",
+      "if (el && !window.confirm(el.dataset.hxConfirm)) {"
+    ],
+    "v2_has_dialog": false,
+    "v2_size": 9187,
+    "v1_size": 3501,
+    "new_features_in_v2_js": [
+      [
+        "focus",
+        11,
+        [
+          "input.focus();",
+          "// Mobile sidebar (QA-03): focus moves into the drawer on open, the page behind it is inert while open,",
+          "// focus returns to the toggle on close. Escape and a click on the overlay close it."
+        ]
+      ],
+      [
+        "account",
+        2,
+        [
+          "// Account menu (QA-01): native <details>; close on Escape (focus back to its summary) and on outside click.",
+          "document.querySelectorAll('details[data-hx-account]').forEach((menu) => {"
+        ]
+      ],
+      [
+        "sidebar",
+        15,
+        [
+          "// Mobile sidebar (QA-03): focus moves into the drawer on open, the page behind it is inert while open,",
+          "const toggle = document.querySelector('[data-hx-sidebar-toggle]');",
+          "const sidebar = document.getElementById('hx-sidebar');"
+        ]
+      ]
+    ]
+  },
+  "ux_04": {
+    "v1_topbar": "<button class=\"hx-topbar__toggle\" type=\"button\" data-hx-sidebar-toggle aria-controls=\"hx-sidebar\" aria-label=\"Menu\">☰</button>\n    <div class=\"hx-topbar__title\">Dashboard</div>\n    <div class=\"hx-topbar__user\">\n      <form method=\"post\" action=\"/locale\" class=\"hx-inline hx-locale\">\n  <input type=\"hidden\" name=\"_csrf\" value=\"18c483914cdd71130d6e37edcb65a48970ddbce2e180ccd6e722b68254cb0b36\">  <input type=\"hidden\" name=\"locale\" value=\"ar\">\n  <input type=\"hidden\" name=\"back\" value=\"/\">\n  <button type=\"submit\" class=\"hx-btn hx-btn--ghost hx-btn--sm\" lang=\"ar\" aria-label=\"Language: العربية\">العربية</button>\n</form>\n            <a class=\"hx-btn hx-btn--ghost hx-btn--sm\" href=\"/notifications\" aria-label=\"Notifications: 0 unread\">🔔</a>\n      <span>Cedric Regis JR</span>\n      <a class=\"hx-btn hx-btn--ghost hx-btn--sm\" href=\"/mfa/setup\">Set up two-factor authentication</a>      <form method=\"post\" action=\"/logout\" class=\"hx-inline\">\n        <input type=\"hidden\" name=\"_csrf\" value=\"18c483914cdd71130d6e37edcb65a48970ddbce2e180ccd6e722b68254cb0b36\">        <button type=\"submit\" class=\"hx-btn hx-btn--ghost hx-btn--sm\">Sign out</button>\n      </form>\n    </div>",
+    "v2_topbar": "<button class=\"hx-iconbtn hx-topbar__toggle\" type=\"button\" data-hx-sidebar-toggle aria-controls=\"hx-sidebar\" aria-expanded=\"false\" aria-label=\"Menu\"><svg class=\"hx-icon\" aria-hidden=\"true\"><use href=\"#i-menu\"/></svg></button>\n    <div class=\"hx-topbar__title\">Dashboard</div>\n    <div class=\"hx-topbar__user\">\n      <form method=\"post\" action=\"/locale\" class=\"hx-inline hx-locale\">\n  <input type=\"hidden\" name=\"_csrf\" value=\"32c7304dd1d8402bbee6651bf09cf054a0231f98372398b7434aef4ebc07e299\">  <input type=\"hidden\" name=\"locale\" value=\"ar\">\n  <input type=\"hidden\" name=\"back\" value=\"/\">\n  <button type=\"submit\" class=\"hx-iconbtn\" lang=\"ar\" aria-label=\"Language: العربية\"><svg class=\"hx-icon\" aria-hidden=\"true\"><use href=\"#i-globe\"/></svg><span>العربية</span></button>\n</form>\n            <a class=\"hx-iconbtn\" href=\"/notifications\" aria-label=\"Notifications: 0 unread\"><svg class=\"hx-icon\" aria-hidden=\"true\"><use href=\"#i-bell\"/></svg></a>\n            <details class=\"hx-account\" data-hx-account>\n        <summary class=\"hx-iconbtn hx-account__toggle\" aria-label=\"Account: Cedrick Regis JR\"><svg class=\"hx-icon\" aria-hidden=\"true\"><use href=\"#i-user\"/></svg> <span class=\"hx-account__name\">Cedrick Regis JR</span></summary>\n        <div class=\"hx-account__menu\">\n          <p class=\"hx-account__who\">Cedrick Regis JR</p>\n          <a class=\"hx-menu__item\" href=\"/mfa/setup\"><svg class=\"hx-icon\" aria-hidden=\"true\"><use href=\"#i-shield\"/></svg>Set up two-factor authentication</a>          <form method=\"post\" action=\"/logout\" class=\"hx-inline\">\n            <input type=\"hidden\" name=\"_csrf\" value=\"32c7304dd1d8402bbee6651bf09cf054a0231f98372398b7434aef4ebc07e299\">            <button type=\"submit\" class=\"hx-menu__item\"><svg class=\"hx-icon hx-icon--flip\" aria-hidden=\"true\"><use href=\"#i-logout\"/></svg>Sign out</button>\n          </form>\n        </div>\n      </details>\n    </div>"
+  },
+  "ux_05": {
+    "leave.html": {
+      "v1_empty": [
+        "<div class=\"hx-empty\"><p class=\"hx-empty__title\">No leave requests</p><p class=\"hx-empty__text\">Requests submitted by employees or by HR on their behalf appear here.</p></div>"
+      ],
+      "v2_empty": [
+        "<div class=\"hx-empty\"><p class=\"hx-empty__title\">No leave requests</p><p class=\"hx-empty__text\">Requests submitted by employees or by HR on their behalf appear here.</p></div>"
+      ]
+    },
+    "attendance.html": {
+      "v1_empty": [
+        "<div class=\"hx-empty\"><p class=\"hx-empty__title\">No attendance records in this period</p>\n  <p class=\"hx-empty__text\">Records appear after punches are imported or recorded and the days are evaluated against published shifts.</p></div>"
+      ],
+      "v2_empty": [
+        "<div class=\"hx-empty\"><p class=\"hx-empty__title\">No attendance records in this period</p>\n  <p class=\"hx-empty__text\">Records appear after punches are imported or recorded and the days are evaluated against published shifts.</p></div>"
+      ]
+    },
+    "approvals.html": {
+      "v1_empty": [
+        "<div class=\"hx-empty\"><p class=\"hx-empty__title\">Nothing to approve</p><p class=\"hx-empty__text\">Leave requests, attendance corrections, overtime and shift swaps assigned to you or your role appear here.</p></div>"
+      ],
+      "v2_empty": [
+        "<div class=\"hx-empty\"><p class=\"hx-empty__title\">Nothing to approve</p><p class=\"hx-empty__text\">Leave requests, attendance corrections, overtime and shift swaps assigned to you or your role appear here.</p></div>"
+      ]
+    },
+    "assets.html": {
+      "v1_empty": [
+        "<div class=\"hx-empty\"><p class=\"hx-empty__title\">No assets</p><p class=\"hx-empty__text\">Register laptops, phones, vehicles, access cards and other company property to track assignments and returns.</p></div>"
+      ],
+      "v2_empty": [
+        "<div class=\"hx-empty\"><p class=\"hx-empty__title\">No assets</p><p class=\"hx-empty__text\">Register laptops, phones, vehicles, access cards and other company property to track assignments and returns.</p></div>"
+      ]
+    },
+    "compliance.html": {
+      "v1_empty": [
+        "<div class=\"hx-empty\"><p class=\"hx-empty__text\">No published policies require acknowledgement.</p></div>",
+        "<div class=\"hx-empty\"><p class=\"hx-empty__text\">No document requirements are defined, or nothing is missing.</p></div>",
+        "<div class=\"hx-empty\"><p class=\"hx-empty__text\">No checklists defined.</p></div>"
+      ],
+      "v2_empty": [
+        "<div class=\"hx-empty\"><p class=\"hx-empty__text\">No published policies require acknowledgement.</p></div>",
+        "<div class=\"hx-empty\"><p class=\"hx-empty__text\">No document requirements are defined, or nothing is missing.</p></div>",
+        "<div class=\"hx-empty\"><p class=\"hx-empty__text\">No checklists defined.</p></div>"
+      ]
+    }
+  },
+  "a11y_01": {
+    "attendance.html": {
+      "v1_inputs": [
+        "<input type=\"checkbox\" name=\"exceptions\" value=\"1\">",
+        "<input type=\"checkbox\" name=\"acknowledge\" value=\"1\">"
+      ],
+      "v2_inputs": [
+        "<input type=\"checkbox\" name=\"exceptions\" value=\"1\">",
+        "<input type=\"checkbox\" name=\"acknowledge\" value=\"1\">"
+      ]
+    },
+    "recruitment.html": {
+      "v1_inputs": [
+        "<input type=\"checkbox\" name=\"open_now\" value=\"1\" checked>"
+      ],
+      "v2_inputs": [
+        "<input type=\"checkbox\" name=\"open_now\" value=\"1\" checked>"
+      ]
+    },
+    "training.html": {
+      "v1_inputs": [
+        "<input type=\"checkbox\" name=\"is_mandatory\" value=\"1\">"
+      ],
+      "v2_inputs": [
+        "<input type=\"checkbox\" name=\"is_mandatory\" value=\"1\">"
+      ]
+    }
+  },
+  "css": {
+    "v1_len": 19867,
+    "v2_len": 36489,
+    "v1_violet": [
+      "--hx-violet: #B55CDB;"
+    ],
+    "v2_violet": [],
+    "v2_has_account_styles": true,
+    "v2_has_dialog_styles": true,
+    "v2_has_card_stack_mobile": true
+  }
+}

@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Organization · S3curity H3LIX</title>
+<meta name="description" content="S3curity H3LIX — People. Connected. Evolved. Enterprise Human Capital Management by S3curity Net.">
+<meta name="application-name" content="S3curity H3LIX">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#081522">
+<link rel="icon" href="/images/brand/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/css/helix.css" nonce="RdOwZn8aIV_pV3KJU4fBj5ok">
+<script src="/js/helix.js" defer nonce="RdOwZn8aIV_pV3KJU4fBj5ok"></script>
+</head>
+<body class="hx-app">
+<aside class="hx-sidebar" id="hx-sidebar">
+  <a class="hx-sidebar__brand" href="/"><img src="/images/brand/h3lix-logo.svg" alt="S3curity H3LIX"></a>
+  <nav class="hx-nav" aria-label="Main">
+      <p class="hx-nav__section">Me</p>
+          <a class="hx-nav__link" href="/me">My workspace</a>
+          <a class="hx-nav__link" href="/team">My team</a>
+          <a class="hx-nav__link" href="/attendance/me">My attendance</a>
+          <a class="hx-nav__link" href="/me/documents">My documents</a>
+          <a class="hx-nav__link" href="/me/onboarding">My onboarding</a>
+          <a class="hx-nav__link" href="/me/performance">My performance</a>
+          <a class="hx-nav__link" href="/me/training">My training</a>
+          <a class="hx-nav__link" href="/me/policies">Company policies</a>
+          <a class="hx-nav__link" href="/me/assets">My assets</a>
+          <a class="hx-nav__link" href="/notifications">Notifications</a>
+          <p class="hx-nav__section">Workspace</p>
+          <a class="hx-nav__link" href="/">Dashboard</a>
+          <a class="hx-nav__link" href="/employees">Employees</a>
+          <a class="hx-nav__link is-active" href="/organization" aria-current="page">Organization</a>
+          <a class="hx-nav__link" href="/recruitment">Recruitment</a>
+          <a class="hx-nav__link" href="/onboarding">Onboarding</a>
+          <a class="hx-nav__link" href="/attendance">Attendance</a>
+          <a class="hx-nav__link" href="/shifts">Shifts</a>
+          <a class="hx-nav__link" href="/leave">Leave</a>
+          <span class="hx-nav__link is-planned" aria-disabled="true">Payroll <span class="hx-badge hx-badge--planned">Planned</span></span>
+          <a class="hx-nav__link" href="/performance">Performance</a>
+          <a class="hx-nav__link" href="/training">Training</a>
+          <a class="hx-nav__link" href="/assets">Assets</a>
+          <a class="hx-nav__link" href="/compliance">Compliance</a>
+          <a class="hx-nav__link" href="/offboarding">Offboarding</a>
+          <a class="hx-nav__link" href="/reports">Reports</a>
+          <a class="hx-nav__link" href="/approvals">Approvals</a>
+          <p class="hx-nav__section">Platform</p>
+          <a class="hx-nav__link" href="/intelligence">H3LIX Intelligence</a>
+          <a class="hx-nav__link" href="/admin/users">Administration</a>
+          <a class="hx-nav__link" href="/devices">Attendance devices</a>
+          <a class="hx-nav__link" href="/admin/audit">Audit log</a>
+          <a class="hx-nav__link" href="/admin/roles">Roles &amp; permissions</a>
+          <span class="hx-nav__link is-planned" aria-disabled="true">Settings <span class="hx-badge hx-badge--planned">Planned</span></span>
+        </nav>
+</aside>
+<div class="hx-main">
+  <header class="hx-topbar">
+    <button class="hx-topbar__toggle" type="button" data-hx-sidebar-toggle aria-controls="hx-sidebar" aria-label="Menu">☰</button>
+    <div class="hx-topbar__title">Organization</div>
+    <div class="hx-topbar__user">
+      <form method="post" action="/locale" class="hx-inline hx-locale">
+  <input type="hidden" name="_csrf" value="18c483914cdd71130d6e37edcb65a48970ddbce2e180ccd6e722b68254cb0b36">  <input type="hidden" name="locale" value="ar">
+  <input type="hidden" name="back" value="/organization">
+  <button type="submit" class="hx-btn hx-btn--ghost hx-btn--sm" lang="ar" aria-label="Language: العربية">العربية</button>
+</form>
+            <a class="hx-btn hx-btn--ghost hx-btn--sm" href="/notifications" aria-label="Notifications: 0 unread">🔔</a>
+      <span>Cedric Regis JR</span>
+      <a class="hx-btn hx-btn--ghost hx-btn--sm" href="/mfa/setup">Set up two-factor authentication</a>      <form method="post" action="/logout" class="hx-inline">
+        <input type="hidden" name="_csrf" value="18c483914cdd71130d6e37edcb65a48970ddbce2e180ccd6e722b68254cb0b36">        <button type="submit" class="hx-btn hx-btn--ghost hx-btn--sm">Sign out</button>
+      </form>
+    </div>
+  </header>
+  <main class="hx-content" id="main">
+        <div class="hx-page-header">
+  <h1>Organization</h1>
+</div>
+
+<section class="hx-card" id="companies">
+  <div class="hx-card__header"><h2 class="hx-card__title">Companies</h2>
+    <a class="hx-btn hx-btn--primary hx-btn--sm" href="/organization/companies/create">Add company</a></div>
+  <div class="hx-card__body">
+      <div class="hx-table-wrap"><table class="hx-table"><thead><tr><th scope="col">Code</th><th scope="col">Name</th><th scope="col">Country</th><th scope="col">Currency</th><th scope="col">Time zone</th><th scope="col">Status</th><th scope="col"></th></tr></thead><tbody>
+          <tr><td>DEMO-SV</td><td>H3LIX Demo Services W.L.L.</td><td>QA</td><td>QAR</td><td>Asia/Qatar</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/companies/2/edit">Edit</a></td></tr>
+          <tr><td>DEMO-TR</td><td>H3LIX Demo Trading W.L.L.</td><td>QA</td><td>QAR</td><td>Asia/Qatar</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/companies/1/edit">Edit</a></td></tr>
+        </tbody></table></div>
+    </div>
+</section>
+
+<section class="hx-card" id="branches">
+  <div class="hx-card__header"><h2 class="hx-card__title">Branches</h2>
+    <a class="hx-btn hx-btn--primary hx-btn--sm" href="/organization/branches/create">Add branch</a></div>
+  <div class="hx-card__body">
+      <div class="hx-table-wrap"><table class="hx-table"><thead><tr><th scope="col">Code</th><th scope="col">Name</th><th scope="col">Company</th><th scope="col">City</th><th scope="col">Status</th><th scope="col"></th></tr></thead><tbody>
+          <tr><td>DOH-CC</td><td>C-Ring Office</td><td>H3LIX Demo Services W.L.L.</td><td>Doha</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/branches/5/edit">Edit</a></td></tr>
+          <tr><td>DOH-IA</td><td>Industrial Area Base</td><td>H3LIX Demo Services W.L.L.</td><td>Doha</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/branches/4/edit">Edit</a></td></tr>
+          <tr><td>WAK</td><td>Al Wakrah Warehouse</td><td>H3LIX Demo Trading W.L.L.</td><td>Al Wakrah</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/branches/3/edit">Edit</a></td></tr>
+          <tr><td>DOH-HQ</td><td>Head Office - West Bay</td><td>H3LIX Demo Trading W.L.L.</td><td>Doha</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/branches/1/edit">Edit</a></td></tr>
+          <tr><td>LUS</td><td>Lusail Showroom</td><td>H3LIX Demo Trading W.L.L.</td><td>Lusail</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/branches/2/edit">Edit</a></td></tr>
+        </tbody></table></div>
+    </div>
+</section>
+
+<section class="hx-card" id="departments">
+  <div class="hx-card__header"><h2 class="hx-card__title">Departments</h2>
+    <a class="hx-btn hx-btn--primary hx-btn--sm" href="/organization/departments/create">Add department</a></div>
+  <div class="hx-card__body">
+      <div class="hx-table-wrap"><table class="hx-table"><thead><tr><th scope="col">Code</th><th scope="col">Name</th><th scope="col">Company</th><th scope="col">Parent</th><th scope="col">Status</th><th scope="col"></th></tr></thead><tbody>
+          <tr><td>EXE</td><td>Executive Office</td><td>H3LIX Demo Services W.L.L.</td><td></td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/departments/8/edit">Edit</a></td></tr>
+          <tr><td>OPS</td><td>Field Operations</td><td>H3LIX Demo Services W.L.L.</td><td></td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/departments/11/edit">Edit</a></td></tr>
+          <tr><td>FIN</td><td>Finance</td><td>H3LIX Demo Services W.L.L.</td><td></td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/departments/10/edit">Edit</a></td></tr>
+          <tr><td>HR</td><td>Human Resources</td><td>H3LIX Demo Services W.L.L.</td><td></td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/departments/9/edit">Edit</a></td></tr>
+          <tr><td>EXE</td><td>Executive Office</td><td>H3LIX Demo Trading W.L.L.</td><td></td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/departments/1/edit">Edit</a></td></tr>
+          <tr><td>FIN</td><td>Finance</td><td>H3LIX Demo Trading W.L.L.</td><td></td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/departments/3/edit">Edit</a></td></tr>
+          <tr><td>HR</td><td>Human Resources</td><td>H3LIX Demo Trading W.L.L.</td><td></td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/departments/2/edit">Edit</a></td></tr>
+          <tr><td>IT</td><td>Information Technology</td><td>H3LIX Demo Trading W.L.L.</td><td></td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/departments/6/edit">Edit</a></td></tr>
+          <tr><td>LOG</td><td>Logistics</td><td>H3LIX Demo Trading W.L.L.</td><td></td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/departments/7/edit">Edit</a></td></tr>
+          <tr><td>OPS</td><td>Operations</td><td>H3LIX Demo Trading W.L.L.</td><td></td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/departments/5/edit">Edit</a></td></tr>
+          <tr><td>SAL</td><td>Sales</td><td>H3LIX Demo Trading W.L.L.</td><td></td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/departments/4/edit">Edit</a></td></tr>
+        </tbody></table></div>
+    </div>
+</section>
+
+<section class="hx-card" id="positions">
+  <div class="hx-card__header"><h2 class="hx-card__title">Positions</h2>
+    <a class="hx-btn hx-btn--primary hx-btn--sm" href="/organization/positions/create">Add position</a></div>
+  <div class="hx-card__body">
+      <div class="hx-table-wrap"><table class="hx-table"><thead><tr><th scope="col">Code</th><th scope="col">Title</th><th scope="col">Company</th><th scope="col">Department</th><th scope="col">Grade</th><th scope="col">Status</th><th scope="col"></th></tr></thead><tbody>
+          <tr><td>FIN-2</td><td>Accountant</td><td>H3LIX Demo Services W.L.L.</td><td>Finance</td><td>G5</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/positions/27/edit">Edit</a></td></tr>
+          <tr><td>FIN-3</td><td>Accounts Assistant</td><td>H3LIX Demo Services W.L.L.</td><td>Finance</td><td>G4</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/positions/28/edit">Edit</a></td></tr>
+          <tr><td>EXE-2</td><td>Executive Assistant</td><td>H3LIX Demo Services W.L.L.</td><td>Executive Office</td><td>G5</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/positions/22/edit">Edit</a></td></tr>
+          <tr><td>FIN-1</td><td>Finance Manager</td><td>H3LIX Demo Services W.L.L.</td><td>Finance</td><td>G6</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/positions/26/edit">Edit</a></td></tr>
+          <tr><td>EXE-1</td><td>General Manager</td><td>H3LIX Demo Services W.L.L.</td><td>Executive Office</td><td>G6</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/positions/21/edit">Edit</a></td></tr>
+          <tr><td>HR-1</td><td>HR Manager</td><td>H3LIX Demo Services W.L.L.</td><td>Human Resources</td><td>G6</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/positions/23/edit">Edit</a></td></tr>
+          <tr><td>HR-2</td><td>HR Officer</td><td>H3LIX Demo Services W.L.L.</td><td>Human Resources</td><td>G5</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/positions/24/edit">Edit</a></td></tr>
+          <tr><td>OPS-1</td><td>Operations Manager</td><td>H3LIX Demo Services W.L.L.</td><td>Field Operations</td><td>G6</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/positions/29/edit">Edit</a></td></tr>
+          <tr><td>OPS-2</td><td>Operations Supervisor</td><td>H3LIX Demo Services W.L.L.</td><td>Field Operations</td><td>G5</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/positions/30/edit">Edit</a></td></tr>
+          <tr><td>HR-3</td><td>Payroll Officer</td><td>H3LIX Demo Services W.L.L.</td><td>Human Resources</td><td>G4</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/positions/25/edit">Edit</a></td></tr>
+          <tr><td>OPS-3</td><td>Technician</td><td>H3LIX Demo Services W.L.L.</td><td>Field Operations</td><td>G4</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/positions/31/edit">Edit</a></td></tr>
+          <tr><td>FIN-2</td><td>Accountant</td><td>H3LIX Demo Trading W.L.L.</td><td>Finance</td><td>G5</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/positions/7/edit">Edit</a></td></tr>
+          <tr><td>FIN-3</td><td>Accounts Assistant</td><td>H3LIX Demo Trading W.L.L.</td><td>Finance</td><td>G4</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/positions/8/edit">Edit</a></td></tr>
+          <tr><td>LOG-3</td><td>Driver</td><td>H3LIX Demo Trading W.L.L.</td><td>Logistics</td><td>G4</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/positions/20/edit">Edit</a></td></tr>
+          <tr><td>EXE-2</td><td>Executive Assistant</td><td>H3LIX Demo Trading W.L.L.</td><td>Executive Office</td><td>G5</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/positions/2/edit">Edit</a></td></tr>
+          <tr><td>FIN-1</td><td>Finance Manager</td><td>H3LIX Demo Trading W.L.L.</td><td>Finance</td><td>G6</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/positions/6/edit">Edit</a></td></tr>
+          <tr><td>EXE-1</td><td>General Manager</td><td>H3LIX Demo Trading W.L.L.</td><td>Executive Office</td><td>G6</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/positions/1/edit">Edit</a></td></tr>
+          <tr><td>HR-1</td><td>HR Manager</td><td>H3LIX Demo Trading W.L.L.</td><td>Human Resources</td><td>G6</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/positions/3/edit">Edit</a></td></tr>
+          <tr><td>HR-2</td><td>HR Officer</td><td>H3LIX Demo Trading W.L.L.</td><td>Human Resources</td><td>G5</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/positions/4/edit">Edit</a></td></tr>
+          <tr><td>IT-1</td><td>IT Manager</td><td>H3LIX Demo Trading W.L.L.</td><td>Information Technology</td><td>G6</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/positions/15/edit">Edit</a></td></tr>
+          <tr><td>LOG-1</td><td>Logistics Manager</td><td>H3LIX Demo Trading W.L.L.</td><td>Logistics</td><td>G6</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/positions/18/edit">Edit</a></td></tr>
+          <tr><td>OPS-1</td><td>Operations Manager</td><td>H3LIX Demo Trading W.L.L.</td><td>Operations</td><td>G6</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/positions/12/edit">Edit</a></td></tr>
+          <tr><td>OPS-2</td><td>Operations Supervisor</td><td>H3LIX Demo Trading W.L.L.</td><td>Operations</td><td>G5</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/positions/13/edit">Edit</a></td></tr>
+          <tr><td>HR-3</td><td>Payroll Officer</td><td>H3LIX Demo Trading W.L.L.</td><td>Human Resources</td><td>G4</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/positions/5/edit">Edit</a></td></tr>
+          <tr><td>SAL-2</td><td>Sales Executive</td><td>H3LIX Demo Trading W.L.L.</td><td>Sales</td><td>G5</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/positions/10/edit">Edit</a></td></tr>
+          <tr><td>SAL-1</td><td>Sales Manager</td><td>H3LIX Demo Trading W.L.L.</td><td>Sales</td><td>G6</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/positions/9/edit">Edit</a></td></tr>
+          <tr><td>SAL-3</td><td>Showroom Associate</td><td>H3LIX Demo Trading W.L.L.</td><td>Sales</td><td>G4</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/positions/11/edit">Edit</a></td></tr>
+          <tr><td>LOG-2</td><td>Storekeeper</td><td>H3LIX Demo Trading W.L.L.</td><td>Logistics</td><td>G5</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/positions/19/edit">Edit</a></td></tr>
+          <tr><td>IT-3</td><td>Support Engineer</td><td>H3LIX Demo Trading W.L.L.</td><td>Information Technology</td><td>G4</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/positions/17/edit">Edit</a></td></tr>
+          <tr><td>IT-2</td><td>Systems Administrator</td><td>H3LIX Demo Trading W.L.L.</td><td>Information Technology</td><td>G5</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/positions/16/edit">Edit</a></td></tr>
+          <tr><td>OPS-3</td><td>Technician</td><td>H3LIX Demo Trading W.L.L.</td><td>Operations</td><td>G4</td><td><span class="hx-badge hx-badge--success">Active</span></td>
+        <td class="hx-table__actions"><a class="hx-btn hx-btn--ghost hx-btn--sm" href="/organization/positions/14/edit">Edit</a></td></tr>
+        </tbody></table></div>
+    </div>
+</section>
+  </main>
+  <footer class="hx-footer">Powered by S3curity Net · S3curity H3LIX v0.2.0</footer>
+</div>
+</body>
+</html>

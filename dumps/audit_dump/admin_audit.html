@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Audit log · S3curity H3LIX</title>
+<meta name="description" content="S3curity H3LIX — People. Connected. Evolved. Enterprise Human Capital Management by S3curity Net.">
+<meta name="application-name" content="S3curity H3LIX">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#081522">
+<link rel="icon" href="/images/brand/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/css/helix.css" nonce="q7y6CmTRZBzW3jON2Wow9KFG">
+<script src="/js/helix.js" defer nonce="q7y6CmTRZBzW3jON2Wow9KFG"></script>
+</head>
+<body class="hx-app">
+<aside class="hx-sidebar" id="hx-sidebar">
+  <a class="hx-sidebar__brand" href="/"><img src="/images/brand/h3lix-logo.svg" alt="S3curity H3LIX"></a>
+  <nav class="hx-nav" aria-label="Main">
+      <p class="hx-nav__section">Me</p>
+          <a class="hx-nav__link" href="/me">My workspace</a>
+          <a class="hx-nav__link" href="/team">My team</a>
+          <a class="hx-nav__link" href="/attendance/me">My attendance</a>
+          <a class="hx-nav__link" href="/me/documents">My documents</a>
+          <a class="hx-nav__link" href="/me/onboarding">My onboarding</a>
+          <a class="hx-nav__link" href="/me/performance">My performance</a>
+          <a class="hx-nav__link" href="/me/training">My training</a>
+          <a class="hx-nav__link" href="/me/policies">Company policies</a>
+          <a class="hx-nav__link" href="/me/assets">My assets</a>
+          <a class="hx-nav__link" href="/notifications">Notifications</a>
+          <p class="hx-nav__section">Workspace</p>
+          <a class="hx-nav__link" href="/">Dashboard</a>
+          <a class="hx-nav__link" href="/employees">Employees</a>
+          <a class="hx-nav__link" href="/organization">Organization</a>
+          <a class="hx-nav__link" href="/recruitment">Recruitment</a>
+          <a class="hx-nav__link" href="/onboarding">Onboarding</a>
+          <a class="hx-nav__link" href="/attendance">Attendance</a>
+          <a class="hx-nav__link" href="/shifts">Shifts</a>
+          <a class="hx-nav__link" href="/leave">Leave</a>
+          <span class="hx-nav__link is-planned" aria-disabled="true">Payroll <span class="hx-badge hx-badge--planned">Planned</span></span>
+          <a class="hx-nav__link" href="/performance">Performance</a>
+          <a class="hx-nav__link" href="/training">Training</a>
+          <a class="hx-nav__link" href="/assets">Assets</a>
+          <a class="hx-nav__link" href="/compliance">Compliance</a>
+          <a class="hx-nav__link" href="/offboarding">Offboarding</a>
+          <a class="hx-nav__link" href="/reports">Reports</a>
+          <a class="hx-nav__link" href="/approvals">Approvals</a>
+          <p class="hx-nav__section">Platform</p>
+          <a class="hx-nav__link" href="/intelligence">H3LIX Intelligence</a>
+          <a class="hx-nav__link" href="/admin/users">Administration</a>
+          <a class="hx-nav__link" href="/devices">Attendance devices</a>
+          <a class="hx-nav__link is-active" href="/admin/audit" aria-current="page">Audit log</a>
+          <a class="hx-nav__link" href="/admin/roles">Roles &amp; permissions</a>
+          <span class="hx-nav__link is-planned" aria-disabled="true">Settings <span class="hx-badge hx-badge--planned">Planned</span></span>
+        </nav>
+</aside>
+<div class="hx-main">
+  <header class="hx-topbar">
+    <button class="hx-topbar__toggle" type="button" data-hx-sidebar-toggle aria-controls="hx-sidebar" aria-label="Menu">☰</button>
+    <div class="hx-topbar__title">Audit log</div>
+    <div class="hx-topbar__user">
+      <form method="post" action="/locale" class="hx-inline hx-locale">
+  <input type="hidden" name="_csrf" value="18c483914cdd71130d6e37edcb65a48970ddbce2e180ccd6e722b68254cb0b36">  <input type="hidden" name="locale" value="ar">
+  <input type="hidden" name="back" value="/admin/audit">
+  <button type="submit" class="hx-btn hx-btn--ghost hx-btn--sm" lang="ar" aria-label="Language: العربية">العربية</button>
+</form>
+            <a class="hx-btn hx-btn--ghost hx-btn--sm" href="/notifications" aria-label="Notifications: 0 unread">🔔</a>
+      <span>Cedric Regis JR</span>
+      <a class="hx-btn hx-btn--ghost hx-btn--sm" href="/mfa/setup">Set up two-factor authentication</a>      <form method="post" action="/logout" class="hx-inline">
+        <input type="hidden" name="_csrf" value="18c483914cdd71130d6e37edcb65a48970ddbce2e180ccd6e722b68254cb0b36">        <button type="submit" class="hx-btn hx-btn--ghost hx-btn--sm">Sign out</button>
+      </form>
+    </div>
+  </header>
+  <main class="hx-content" id="main">
+        <div class="hx-page-header"><h1>Audit log</h1></div>
+<section class="hx-card">
+  <div class="hx-card__body">
+    <form class="hx-form hx-toolbar" method="get" action="/admin/audit">
+      <div class="hx-field"><label class="hx-label" for="action">Action prefix</label><input class="hx-input" id="action" name="action" value="" placeholder="user."></div>
+      <div class="hx-field"><label class="hx-label" for="user">Username</label><input class="hx-input" id="user" name="user" value=""></div>
+      <div class="hx-field"><label class="hx-label" for="from">From</label><input class="hx-input" id="from" name="from" type="date" value=""></div>
+      <div class="hx-field"><label class="hx-label" for="to">To</label><input class="hx-input" id="to" name="to" type="date" value=""></div>
+      <div class="hx-form__actions"><button class="hx-btn hx-btn--primary" type="submit">Filter</button> <a class="hx-btn hx-btn--ghost" href="/admin/audit">Reset</a></div>
+    </form>
+  </div>
+</section>
+<section class="hx-card">
+  <div class="hx-card__header"><h2 class="hx-card__title">39 events</h2></div>
+  <div class="hx-card__body">
+    <div class="hx-table-wrap"><table class="hx-table"><thead><tr><th scope="col">When (UTC)</th><th scope="col">User</th><th scope="col">Action</th><th scope="col">Entity</th><th scope="col">IP</th><th scope="col">Details</th></tr></thead><tbody>
+  <tr>
+    <td>2026-10-12 06:10:12</td><td>cedi</td><td>auth.login</td>
+    <td>user 2</td><td>146.70.246.168</td>
+    <td><code></code></td></tr><tr>
+    <td>2026-10-12 06:09:49</td><td>cedi</td><td>auth.login</td>
+    <td>user 2</td><td>146.70.246.168</td>
+    <td><code></code></td></tr><tr>
+    <td>2026-10-12 06:03:26</td><td>cedi</td><td>auth.password_changed</td>
+    <td>user 2</td><td>146.70.246.168</td>
+    <td><code></code></td></tr><tr>
+    <td>2026-10-12 06:03:20</td><td>audit</td><td>report.exported</td>
+    <td>report</td><td>78.101.198.28</td>
+    <td><code>{&quot;report&quot;:&quot;headcount&quot;,&quot;format&quot;:&quot;pdf&quot;,&quot;company&quot;:null,&quot;from&quot;:&quot;2026-01-01&quot;,&quot;to&quot;:&quot;2026-10-12&quot;,&quot;rows&quot;:16}</code></td></tr><tr>
+    <td>2026-10-12 06:03:17</td><td>audit</td><td>report.exported</td>
+    <td>report</td><td>78.101.198.28</td>
+    <td><code>{&quot;report&quot;:&quot;headcount&quot;,&quot;format&quot;:&quot;xlsx&quot;,&quot;company&quot;:null,&quot;from&quot;:&quot;2026-01-01&quot;,&quot;to&quot;:&quot;2026-10-12&quot;,&quot;rows&quot;:16}</code></td></tr><tr>
+    <td>2026-10-12 06:03:01</td><td>cedi</td><td>auth.login</td>
+    <td>user 2</td><td>146.70.246.168</td>
+    <td><code></code></td></tr><tr>
+    <td>2026-10-12 06:02:34</td><td>admin</td><td>user.password_reset</td>
+    <td>user 2</td><td>78.101.198.28</td>
+    <td><code></code></td></tr><tr>
+    <td>2026-10-12 06:01:49</td><td>cedi</td><td>auth.login_failed</td>
+    <td>user 2</td><td>146.70.246.168</td>
+    <td><code></code></td></tr><tr>
+    <td>2026-10-12 06:01:26</td><td>—</td><td>auth.reset_requested</td>
+    <td></td><td>146.70.246.168</td>
+    <td><code>{&quot;matched&quot;:false}</code></td></tr><tr>
+    <td>2026-10-12 06:01:16</td><td>cedi</td><td>auth.login_failed</td>
+    <td>user 2</td><td>146.70.246.168</td>
+    <td><code></code></td></tr><tr>
+    <td>2026-10-12 06:01:07</td><td>cedi</td><td>auth.login_failed</td>
+    <td>user 2</td><td>146.70.246.168</td>
+    <td><code></code></td></tr><tr>
+    <td>2026-10-12 06:00:57</td><td>cedi</td><td>auth.login_failed</td>
+    <td>user 2</td><td>146.70.246.168</td>
+    <td><code></code></td></tr><tr>
+    <td>2026-10-12 06:00:53</td><td>cedi</td><td>auth.logout</td>
+    <td>user 2</td><td>146.70.246.168</td>
+    <td><code></code></td></tr><tr>
+    <td>2026-10-12 06:00:45</td><td>audit</td><td>report.exported</td>
+    <td>report</td><td>78.101.198.28</td>
+    <td><code>{&quot;report&quot;:&quot;headcount&quot;,&quot;format&quot;:&quot;csv&quot;,&quot;company&quot;:null,&quot;from&quot;:&quot;2026-01-01&quot;,&quot;to&quot;:&quot;2026-10-12&quot;,&quot;rows&quot;:16}</code></td></tr><tr>
+    <td>2026-10-12 05:56:30</td><td>audit</td><td>auth.password_changed</td>
+    <td>user 3</td><td>78.101.198.28</td>
+    <td><code></code></td></tr><tr>
+    <td>2026-10-12 05:55:36</td><td>audit</td><td>auth.password_change_failed</td>
+    <td>user 3</td><td>78.101.198.28</td>
+    <td><code></code></td></tr><tr>
+    <td>2026-10-12 05:55:17</td><td>audit</td><td>auth.password_change_failed</td>
+    <td>user 3</td><td>78.101.198.28</td>
+    <td><code></code></td></tr><tr>
+    <td>2026-10-12 05:53:49</td><td>audit</td><td>auth.login</td>
+    <td>user 3</td><td>78.101.198.28</td>
+    <td><code></code></td></tr><tr>
+    <td>2026-10-12 05:50:28</td><td>admin</td><td>user.created</td>
+    <td>user 3</td><td>78.101.198.28</td>
+    <td><code>{&quot;username&quot;:&quot;audit&quot;,&quot;roles&quot;:[1],&quot;companies&quot;:[2,1],&quot;mfa_required&quot;:false}</code></td></tr><tr>
+    <td>2026-10-12 05:48:56</td><td>admin</td><td>user.roles_changed</td>
+    <td>user 2</td><td>78.101.198.28</td>
+    <td><code>{&quot;from&quot;:[],&quot;to&quot;:[1]}</code></td></tr><tr>
+    <td>2026-10-12 05:48:56</td><td>admin</td><td>user.updated</td>
+    <td>user 2</td><td>78.101.198.28</td>
+    <td><code>{&quot;display_name&quot;:&quot;Cedric Regis JR&quot;}</code></td></tr><tr>
+    <td>2026-10-12 05:48:48</td><td>cedi</td><td>access.denied</td>
+    <td></td><td>146.70.246.168</td>
+    <td><code>{&quot;permission&quot;:&quot;dashboard.view&quot;}</code></td></tr><tr>
+    <td>2026-10-12 05:48:34</td><td>cedi</td><td>access.denied</td>
+    <td></td><td>146.70.246.168</td>
+    <td><code>{&quot;permission&quot;:&quot;dashboard.view&quot;}</code></td></tr><tr>
+    <td>2026-10-12 05:48:33</td><td>cedi</td><td>auth.password_changed</td>
+    <td>user 2</td><td>146.70.246.168</td>
+    <td><code></code></td></tr><tr>
+    <td>2026-10-12 05:48:04</td><td>cedi</td><td>auth.login</td>
+    <td>user 2</td><td>146.70.246.168</td>
+    <td><code></code></td></tr><tr>
+    <td>2026-10-12 05:46:50</td><td>admin</td><td>user.created</td>
+    <td>user 2</td><td>78.101.198.28</td>
+    <td><code>{&quot;username&quot;:&quot;cedi&quot;,&quot;roles&quot;:[],&quot;companies&quot;:[2,1],&quot;mfa_required&quot;:false}</code></td></tr><tr>
+    <td>2026-10-12 05:46:29</td><td>admin</td><td>auth.login</td>
+    <td>user 1</td><td>78.101.198.28</td>
+    <td><code>{&quot;mfa&quot;:true}</code></td></tr><tr>
+    <td>2026-10-12 05:46:17</td><td>admin</td><td>auth.password_ok_mfa_pending</td>
+    <td>user 1</td><td>78.101.198.28</td>
+    <td><code></code></td></tr><tr>
+    <td>2026-10-11 17:45:28</td><td>admin</td><td>auth.login</td>
+    <td>user 1</td><td>178.153.44.193</td>
+    <td><code>{&quot;mfa&quot;:true}</code></td></tr><tr>
+    <td>2026-10-11 17:45:24</td><td>admin</td><td>auth.password_ok_mfa_pending</td>
+    <td>user 1</td><td>178.153.44.193</td>
+    <td><code></code></td></tr><tr>
+    <td>2026-10-11 09:38:34</td><td>admin</td><td>auth.login</td>
+    <td>user 1</td><td>78.101.198.28</td>
+    <td><code>{&quot;mfa&quot;:true}</code></td></tr><tr>
+    <td>2026-10-11 09:38:21</td><td>admin</td><td>auth.password_ok_mfa_pending</td>
+    <td>user 1</td><td>78.101.198.28</td>
+    <td><code></code></td></tr><tr>
+    <td>2026-10-11 09:30:56</td><td>admin</td><td>auth.mfa_enrolled</td>
+    <td>user 1</td><td>78.101.198.28</td>
+    <td><code></code></td></tr><tr>
+    <td>2026-10-11 09:30:13</td><td>admin</td><td>auth.password_changed</td>
+    <td>user 1</td><td>78.101.198.28</td>
+    <td><code></code></td></tr><tr>
+    <td>2026-10-11 09:29:13</td><td>admin</td><td>auth.login</td>
+    <td>user 1</td><td>78.101.198.28</td>
+    <td><code></code></td></tr><tr>
+    <td>2026-10-11 09:28:23</td><td>admin</td><td>auth.login_failed</td>
+    <td>user 1</td><td>78.101.198.28</td>
+    <td><code></code></td></tr><tr>
+    <td>2026-10-11 09:24:54</td><td>—</td><td>auth.login_failed</td>
+    <td></td><td>149.102.148.63</td>
+    <td><code>{&quot;username_known&quot;:false}</code></td></tr><tr>
+    <td>2026-10-11 09:24:54</td><td>—</td><td>auth.login_failed</td>
+    <td></td><td>149.102.148.63</td>
+    <td><code>{&quot;username_known&quot;:false}</code></td></tr><tr>
+    <td>2026-10-11 09:22:35</td><td>admin</td><td>bootstrap.admin_created</td>
+    <td>user 1</td><td>0.0.0.0</td>
+    <td><code></code></td></tr>  </tbody></table></div>
+  <nav class="hx-pagination" aria-label="Pagination">
+        <span class="hx-muted">Page 1 of 1</span>
+      </nav>
+    </div>
+</section>
+  </main>
+  <footer class="hx-footer">Powered by S3curity Net · S3curity H3LIX v0.2.0</footer>
+</div>
+</body>
+</html>

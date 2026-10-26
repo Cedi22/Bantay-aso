@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard · S3curity H3LIX</title>
+<meta name="description" content="S3curity H3LIX — People. Connected. Evolved. Enterprise Human Capital Management by S3curity Net.">
+<meta name="application-name" content="S3curity H3LIX">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#081522">
+<link rel="icon" href="/images/brand/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/css/helix.css" nonce="j2DAPS-Ml68G03AQk63hIAny">
+<script src="/js/helix.js" defer nonce="j2DAPS-Ml68G03AQk63hIAny"></script>
+</head>
+<body class="hx-app">
+<aside class="hx-sidebar" id="hx-sidebar">
+  <a class="hx-sidebar__brand" href="/"><img src="/images/brand/h3lix-logo.svg" alt="S3curity H3LIX"></a>
+  <nav class="hx-nav" aria-label="Main">
+      <p class="hx-nav__section">Me</p>
+          <a class="hx-nav__link" href="/me">My workspace</a>
+          <a class="hx-nav__link" href="/team">My team</a>
+          <a class="hx-nav__link" href="/attendance/me">My attendance</a>
+          <a class="hx-nav__link" href="/me/documents">My documents</a>
+          <a class="hx-nav__link" href="/me/onboarding">My onboarding</a>
+          <a class="hx-nav__link" href="/me/performance">My performance</a>
+          <a class="hx-nav__link" href="/me/training">My training</a>
+          <a class="hx-nav__link" href="/me/policies">Company policies</a>
+          <a class="hx-nav__link" href="/me/assets">My assets</a>
+          <a class="hx-nav__link" href="/notifications">Notifications</a>
+          <p class="hx-nav__section">Workspace</p>
+          <a class="hx-nav__link is-active" href="/" aria-current="page">Dashboard</a>
+          <a class="hx-nav__link" href="/employees">Employees</a>
+          <a class="hx-nav__link" href="/organization">Organization</a>
+          <a class="hx-nav__link" href="/recruitment">Recruitment</a>
+          <a class="hx-nav__link" href="/onboarding">Onboarding</a>
+          <a class="hx-nav__link" href="/attendance">Attendance</a>
+          <a class="hx-nav__link" href="/shifts">Shifts</a>
+          <a class="hx-nav__link" href="/leave">Leave</a>
+          <span class="hx-nav__link is-planned" aria-disabled="true">Payroll <span class="hx-badge hx-badge--planned">Planned</span></span>
+          <a class="hx-nav__link" href="/performance">Performance</a>
+          <a class="hx-nav__link" href="/training">Training</a>
+          <a class="hx-nav__link" href="/assets">Assets</a>
+          <a class="hx-nav__link" href="/compliance">Compliance</a>
+          <a class="hx-nav__link" href="/offboarding">Offboarding</a>
+          <a class="hx-nav__link" href="/reports">Reports</a>
+          <a class="hx-nav__link" href="/approvals">Approvals</a>
+          <p class="hx-nav__section">Platform</p>
+          <a class="hx-nav__link" href="/intelligence">H3LIX Intelligence</a>
+          <a class="hx-nav__link" href="/admin/users">Administration</a>
+          <a class="hx-nav__link" href="/devices">Attendance devices</a>
+          <a class="hx-nav__link" href="/admin/audit">Audit log</a>
+          <a class="hx-nav__link" href="/admin/roles">Roles &amp; permissions</a>
+          <span class="hx-nav__link is-planned" aria-disabled="true">Settings <span class="hx-badge hx-badge--planned">Planned</span></span>
+        </nav>
+</aside>
+<div class="hx-main">
+  <header class="hx-topbar">
+    <button class="hx-topbar__toggle" type="button" data-hx-sidebar-toggle aria-controls="hx-sidebar" aria-label="Menu">☰</button>
+    <div class="hx-topbar__title">Dashboard</div>
+    <div class="hx-topbar__user">
+      <form method="post" action="/locale" class="hx-inline hx-locale">
+  <input type="hidden" name="_csrf" value="18c483914cdd71130d6e37edcb65a48970ddbce2e180ccd6e722b68254cb0b36">  <input type="hidden" name="locale" value="ar">
+  <input type="hidden" name="back" value="/">
+  <button type="submit" class="hx-btn hx-btn--ghost hx-btn--sm" lang="ar" aria-label="Language: العربية">العربية</button>
+</form>
+            <a class="hx-btn hx-btn--ghost hx-btn--sm" href="/notifications" aria-label="Notifications: 0 unread">🔔</a>
+      <span>Cedric Regis JR</span>
+      <a class="hx-btn hx-btn--ghost hx-btn--sm" href="/mfa/setup">Set up two-factor authentication</a>      <form method="post" action="/logout" class="hx-inline">
+        <input type="hidden" name="_csrf" value="18c483914cdd71130d6e37edcb65a48970ddbce2e180ccd6e722b68254cb0b36">        <button type="submit" class="hx-btn hx-btn--ghost hx-btn--sm">Sign out</button>
+      </form>
+    </div>
+  </header>
+  <main class="hx-content" id="main">
+        <div class="hx-page-header">
+  <h1>Dashboard</h1>
+  <div class="hx-page-header__actions">
+    <a class="hx-btn hx-btn--primary" href="/employees/create">Add employee</a>    <a class="hx-btn hx-btn--ghost" href="/organization">Organization</a>  </div>
+</div>
+
+
+<section aria-labelledby="hx-today"><h2 id="hx-today">Today</h2>
+<div class="hx-grid">
+  <div class="hx-card hx-stat"><p class="hx-stat__label">Present today</p>
+    <p class="hx-stat__value"><a href="/attendance">0</a></p>
+    <p class="hx-stat__meta">0 late · 0 absent or incomplete</p></div><div class="hx-card hx-stat"><p class="hx-stat__label">On leave today</p>
+    <p class="hx-stat__value"><a href="/leave/calendar">0</a></p>
+    </div><div class="hx-card hx-stat"><p class="hx-stat__label">Waiting for my approval</p>
+    <p class="hx-stat__value"><a href="/approvals">0</a></p>
+    </div><div class="hx-card hx-stat"><p class="hx-stat__label">Expiring within 30 days</p>
+    <p class="hx-stat__value"><a href="/documents/expiring">0</a></p>
+    <p class="hx-stat__meta">0 documents · 0 contracts</p></div><div class="hx-card hx-stat"><p class="hx-stat__label">Open requisitions</p>
+    <p class="hx-stat__value"><a href="/recruitment">0</a></p>
+    <p class="hx-stat__meta">0 candidates in progress</p></div><div class="hx-card hx-stat"><p class="hx-stat__label">Onboarding cases</p>
+    <p class="hx-stat__value"><a href="/onboarding">0</a></p>
+    <p class="hx-stat__meta">0 overdue tasks</p></div><div class="hx-card hx-stat"><p class="hx-stat__label">Overdue training</p>
+    <p class="hx-stat__value"><a href="/training">0</a></p>
+    </div><div class="hx-card hx-stat"><p class="hx-stat__label">Open policy acknowledgements</p>
+    <p class="hx-stat__value"><a href="/compliance">0</a></p>
+    </div></div>
+</section>
+
+<div class="hx-grid">
+  <div class="hx-card hx-stat"><p class="hx-stat__label">Total employees</p><p class="hx-stat__value">40</p><p class="hx-stat__meta">All statuses</p></div>
+  <div class="hx-card hx-stat"><p class="hx-stat__label">Active employees</p><p class="hx-stat__value">38</p><p class="hx-stat__meta">4 on probation</p></div>
+  <div class="hx-card hx-stat"><p class="hx-stat__label">On leave</p><p class="hx-stat__value">1</p><p class="hx-stat__meta">Employee status</p></div>
+  <div class="hx-card hx-stat"><p class="hx-stat__label">Organization</p><p class="hx-stat__value">2</p><p class="hx-stat__meta">5 branches · 11 departments</p></div>
+</div>
+
+<div class="hx-grid hx-grid--wide">
+  <section class="hx-card">
+    <div class="hx-card__header"><h2 class="hx-card__title">Department distribution</h2></div>
+    <div class="hx-card__body">
+          <div class="hx-table-wrap"><table class="hx-table"><thead><tr><th scope="col">Department</th><th scope="col" class="hx-num">Employees</th></tr></thead><tbody>
+      <tr><td>Finance</td><td class="hx-num">13</td></tr><tr><td>Human Resources</td><td class="hx-num">7</td></tr><tr><td>Logistics</td><td class="hx-num">5</td></tr><tr><td>Sales</td><td class="hx-num">4</td></tr><tr><td>Operations</td><td class="hx-num">3</td></tr><tr><td>Information Technology</td><td class="hx-num">3</td></tr><tr><td>Executive Office</td><td class="hx-num">2</td></tr><tr><td>Field Operations</td><td class="hx-num">2</td></tr>      </tbody></table></div>
+        </div>
+  </section>
+  <section class="hx-card">
+    <div class="hx-card__header"><h2 class="hx-card__title">Recent hires</h2></div>
+    <div class="hx-card__body">
+          <div class="hx-table-wrap"><table class="hx-table"><thead><tr><th scope="col">No.</th><th scope="col">Name</th><th scope="col">Company</th><th scope="col">Hire date</th></tr></thead><tbody>
+      <tr><td>DEMO-SV-0007</td><td>Bikash Gurung</td><td>H3LIX Demo Services W.L.L.</td><td>2026-09-27</td></tr><tr><td>DEMO-SV-0008</td><td>Joseph Dela Cruz</td><td>H3LIX Demo Services W.L.L.</td><td>2026-08-20</td></tr><tr><td>DEMO-SV-0011</td><td>Grace Bautista</td><td>H3LIX Demo Services W.L.L.</td><td>2026-08-12</td></tr><tr><td>DEMO-TR-0016</td><td>Ahmed Al-Kuwari</td><td>H3LIX Demo Trading W.L.L.</td><td>2026-07-27</td></tr><tr><td>DEMO-TR-0011</td><td>Nour Khalil</td><td>H3LIX Demo Trading W.L.L.</td><td>2026-05-27</td></tr>      </tbody></table></div>
+        </div>
+  </section>
+</div>
+
+<div class="hx-grid hx-grid--wide">
+  <section class="hx-card">
+    <div class="hx-card__header"><h2 class="hx-card__title">Attendance, leave &amp; payroll</h2></div>
+    <div class="hx-card__body hx-empty">
+      <p class="hx-empty__title">Modules planned</p>
+      <p class="hx-empty__text">Present today, late arrivals, pending approvals, contract expiries and payroll overview will show live figures once the Attendance, Leave and Payroll modules ship. No figures are shown until real data exists.</p>
+    </div>
+  </section>
+    <section class="hx-card">
+    <div class="hx-card__header"><h2 class="hx-card__title">Recent activity</h2></div>
+    <div class="hx-card__body">
+          <div class="hx-table-wrap"><table class="hx-table"><thead><tr><th scope="col">When (UTC)</th><th scope="col">User</th><th scope="col">Action</th></tr></thead><tbody>
+      <tr><td>2026-10-12 06:10:12</td><td>cedi</td><td>auth.login</td></tr><tr><td>2026-10-12 06:09:49</td><td>cedi</td><td>auth.login</td></tr><tr><td>2026-10-12 06:03:26</td><td>cedi</td><td>auth.password_changed</td></tr><tr><td>2026-10-12 06:03:20</td><td>audit</td><td>report.exported</td></tr><tr><td>2026-10-12 06:03:17</td><td>audit</td><td>report.exported</td></tr><tr><td>2026-10-12 06:03:01</td><td>cedi</td><td>auth.login</td></tr><tr><td>2026-10-12 06:02:34</td><td>admin</td><td>user.password_reset</td></tr><tr><td>2026-10-12 06:01:49</td><td>cedi</td><td>auth.login_failed</td></tr>      </tbody></table></div>
+        </div>
+  </section>
+  </div>
+  </main>
+  <footer class="hx-footer">Powered by S3curity Net · S3curity H3LIX v0.2.0</footer>
+</div>
+</body>
+</html>

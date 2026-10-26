@@ -1,0 +1,80 @@
+# =============================================================================
+# Bantay Aso — Apache / Virtualmin Hardened Routing & Security Rules
+# Mitigates: PHP2Shell (CVE-2026-109618/19), RCE, LFI, and Unauthorized Access
+# ==============================================================================
+
+# Disable directory indexing and script execution in non-script paths
+Options -Indexes -ExecCGI
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # --------------------------------------------------------------------------
+    # 1. PHP2Shell Defense: Drop multipart form-data requests completely
+    # (Bantay Aso is purely JSON/REST & standard forms; multipart is disabled)
+    # --------------------------------------------------------------------------
+    RewriteCond %{HTTP:Content-Type} multipart/form-data [NC]
+    RewriteRule .* - [F,L]
+
+    # --------------------------------------------------------------------------
+    # 2. Strict Internal Directory Isolation (Block web access)
+    # --------------------------------------------------------------------------
+    RewriteRule ^(data|dumps|config|includes|scripts|storage|uploads|cache)(\/|$) - [F,L]
+
+    # --------------------------------------------------------------------------
+    # 3. Application API & Dashboard Routing
+    # --------------------------------------------------------------------------
+    # Route /api/state to api/state.php
+    RewriteRule ^api/state/?$ api/state.php [L,QSA]
+
+    # Route /api/ui-state to api/ui-state.php
+    RewriteRule ^api/ui-state/?$ api/ui-state.php [L,QSA]
+
+    # Route /api/doctor to api/doctor.php
+    RewriteRule ^api/doctor/?$ api/doctor.php [L,QSA]
+
+    # Route /api/sync-files to api/sync.php?action=sync
+    RewriteRule ^api/sync-files/?$ api/sync.php?action=sync [L,QSA]
+
+    # Route qa-dashboard and dropdown-qa to protected qa-dashboard.php
+    RewriteRule ^dropdown-qa(\.html)?$ qa-dashboard.php [L,QSA]
+    RewriteRule ^qa-dashboard\.html$ qa-dashboard.php [L,QSA]
+    RewriteRule ^qa-dashboard/?$ qa-dashboard.php [L,QSA]
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 4. Block Script Execution in Static, Upload, and Cache Directories
+# ------------------------------------------------------------------------------
+<DirectoryMatch "^.*/(assets|data|dumps|config|includes|scripts|storage|uploads|cache)/?.*$">
+    <FilesMatch "(?i)\.(ph(p[0-9]?|t|tml|ar)|cgi|pl|py|sh|bash|exe|bat|cmd)$">
+        <IfModule mod_authz_core.c>
+            Require all denied
+        </IfModule>
+        <IfModule !mod_authz_core.c>
+            Deny from all
+        </IfModule>
+    </FilesMatch>
+</DirectoryMatch>
+
+# ------------------------------------------------------------------------------
+# 5. Sensitive File Type Protection (Databases, configs, logs, environments)
+# ------------------------------------------------------------------------------
+<FilesMatch "(?i)\.(sqlite|sqlite3|db|env.*|log|lock|ini|conf|bak|backup|old|ps1|sh|git.*)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# ------------------------------------------------------------------------------
+# 6. Enterprise Security Headers
+# ------------------------------------------------------------------------------
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>

@@ -1,0 +1,187 @@
+====================================================================================================
+                        QUALITY ASSURANCE AUDIT REPORT (V2): UX & UI EVALUATION
+====================================================================================================
+  Target Application : S3curity H3LIX Enterprise Human Capital Management Portal
+  Target URL         : https://hrms-dev.s3curity.net/
+  Audited Account    : cedi (Cedrick Regis Jr. — Super Administrator / Employee #41)
+  Audit Version      : V2.0 (Post-Linking & Engineering Patch Re-Evaluation)
+  Audit Date         : October 12, 2026
+  Scope Evaluated    : 28 Portal Views, Updated Design System (helix.css - 36.5 KB),
+                       Updated Client Engine (helix.js - 9.2 KB), WCAG 2.1 AA Compliance,
+                       Mobile Focus Trapping, Header Architecture, and Employee Record Integration
+====================================================================================================
+
+┌──────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 1. EXECUTIVE SUMMARY & REVISED SCORECARD                                                         │
+└──────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+  OVERALL UX/UI RATING: [ 87 / 100 ] — Substantially Enhanced Enterprise Foundation (+6 Points)
+
+  A comprehensive V2 Quality Assurance re-evaluation was conducted on S3curity H3LIX following
+  the successful employee profile association for administrative account "cedi" and the deployment
+  of critical engineering accessibility patches in the client engine and stylesheet.
+
+  The audit confirms significant UX breakthroughs:
+  1. Complete elimination of all 403 Forbidden navigation dead-ends across the "Me" self-service suite
+     via the association of user "cedi" with Employee Record #41 (Cedrick Regis Jr.).
+  2. Implementation of a unified, accessible User Profile & Account Drawer (<details class="hx-account">)
+     in the global topbar, replacing cluttered loose action buttons.
+  3. Resolution of WCAG 2.4.3 focus management violations on mobile viewports via robust keyboard
+     focus trapping, background inert isolation, and Escape-key listeners in helix.js.
+  4. Integration of client-side cross-field validation with dynamic ARIA announcements for date ranges.
+
+  ┌──────────────────────────────────────────────┬──────────┬──────────┬──────────────────────────────────────┐
+  │ EVALUATION CATEGORY                          │ V1 SCORE │ V2 SCORE │ DELTA / BENCHMARK RATING             │
+  ├──────────────────────────────────────────────┼──────────┼──────────┼──────────────────────────────────────┤
+  │ Visual Design & Aesthetic Consistency        │ 90 / 100 │ 94 / 100 │ +4 (SVG sprite system, font preload) │
+  │ Information Architecture & Scannability      │ 82 / 100 │ 91 / 100 │ +9 (Self-service unlocked, account)  │
+  │ Responsive Layout & Viewport Scaling         │ 79 / 100 │ 88 / 100 │ +9 (Drawer inert trap & sync)        │
+  │ Accessibility Compliance (WCAG 2.1 AA)       │ 80 / 100 │ 87 / 100 │ +7 (Focus trapping, aria-busy/range) │
+  │ Forms, Inputs & Data Entry Ergonomics        │ 74 / 100 │ 77 / 100 │ +3 (Doc form render; ISO-2 pending)  │
+  ├──────────────────────────────────────────────┼──────────┼──────────┼──────────────────────────────────────┤
+  │ COMPOSITE SCORE                              │ 81 / 100 │ 87 / 100 │ +6 Overall Enterprise Maturity Gain  │
+  └──────────────────────────────────────────────┴──────────┴──────────┴──────────────────────────────────────┘
+
+
+┌──────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 2. DEFECT RESOLUTION & STATUS MATRIX                                                             │
+└──────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+  ┌─────────┬──────────┬─────────────────────────────┬─────────────────────────────┬──────────────┐
+  │ ID      │ SEVERITY │ MODULE / LOCATION           │ SUMMARY FINDING             │ V2 STATUS    │
+  ├─────────┼──────────┼─────────────────────────────┼─────────────────────────────┼──────────────┤
+  │ UX-01   │ CRITICAL │ Navigation (Me Section)     │ 403 Dead-End on Unlinked Acc│ RESOLVED     │
+  │ UX-02   │ CRITICAL │ Employees (Add Employee)    │ Manual ISO-2 Code for Ctry  │ OPEN         │
+  │ UX-03   │ MAJOR    │ Global Engine (helix.js)    │ Destructive window.confirm  │ OPEN         │
+  │ UX-04   │ MAJOR    │ Topbar Utility Header       │ Loose Action Buttons        │ RESOLVED     │
+  │ UX-05   │ MAJOR    │ Tables (Leaves, Attendance) │ Empty States lack CTAs      │ OPEN         │
+  │ A11Y-01 │ MAJOR    │ Form Controls (Filters)     │ Checkboxes Missing Labels   │ OPEN         │
+  │ A11Y-02 │ MAJOR    │ Mobile Drawer Navigation    │ Escape focus escaping       │ RESOLVED     │
+  │ A11Y-03 │ MINOR    │ Date Range Filters          │ Cross-field validation gaps │ RESOLVED     │
+  └─────────┴──────────┴─────────────────────────────┴─────────────────────────────┴──────────────┘
+
+
+┌──────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 3. DEEP-DIVE FINDINGS & VERIFICATION OF CHANGES                                                  │
+└──────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+  [DEFECT UX-01 : RESOLVED] 403 DEAD-END ON SELF-SERVICE NAVIGATION
+  ───────────────────────────────────────────────────────────────────────────────────────────────
+  • Location : Left Sidebar Navigation -> "Me" Section (/me, /team, /attendance/me, /me/documents)
+  • V1 Observation :
+    Clicking 7 of 10 self-service links resulted in raw HTTP 403 Forbidden pages ("Your account is
+    not linked to an employee record").
+  • V2 Verification & Current State :
+    User account "cedi" was explicitly linked to Employee Record ID 41 ("22 — Cedrick Regis Jr.")
+    in the database via /admin/users/2. All self-service endpoints now return HTTP 200 OK:
+    - /me                : Renders customized dashboard: "Welcome, Cedrick | Position: Technician |
+                           Executive Office · H3LIX Demo Services W.L.L."
+    - /team              : Successfully renders team direct-report cards and approval workflows.
+    - /attendance/me     : Displays employee punch history, daily logs, and correction triggers.
+    - /me/documents      : Displays active contract repositories and upload capabilities.
+  • Remaining Architectural Recommendation :
+    While the issue is resolved for user "cedi", newly provisioned administrators without an
+    employee link will still experience the legacy 403 error. The backend should automatically
+    render an in-app "Link Employee Wizard" banner rather than a raw 403 screen.
+
+  [DEFECT UX-02 : OPEN] MANUAL ISO-2 NATIONALITY DATA ENTRY
+  ───────────────────────────────────────────────────────────────────────────────────────────────
+  • Location : Add Employee Form (/employees/create) -> Field name="nationality"
+  • Current State :
+    Field remains rendered as:
+    <input class="hx-input" type="text" id="f_nationality" name="nationality" maxlength="2" value="QA">
+  • Impact :
+    Users attempting to type full country names (e.g. "Qatar", "Philippines", "Egypt") encounter
+    hard 2-character truncation.
+  • Recommended Action :
+    Deploy a standard country selector <select> with ISO-3166 typeahead search and country flags.
+
+  [DEFECT UX-03 : OPEN] DESTRUCTIVE ACTIONS USE NATIVE BROWSER CONFIRMATION
+  ───────────────────────────────────────────────────────────────────────────────────────────────
+  • Location : Global Client Interactions (helix.js line 48)
+  • Current State :
+    Code continues to rely on:
+    document.addEventListener('click', (event) => {
+      const el = event.target.closest('[data-hx-confirm]');
+      if (el && !window.confirm(el.dataset.hxConfirm)) {
+        event.preventDefault(); event.stopImmediatePropagation();
+      }
+    }, true);
+  • Impact :
+    Freezes browser rendering thread; breaks high-end cybersecurity dark aesthetic consistency.
+  • Recommended Action :
+    Upgrade to HTML5 <dialog> or accessible custom modal container matching the dark helix theme.
+
+  [DEFECT UX-04 : RESOLVED] TOPBAR UTILITY HEADER ARCHITECTURE
+  ───────────────────────────────────────────────────────────────────────────────────────────────
+  • Location : Global Header (<header class="hx-topbar">)
+  • V1 Observation :
+    Header rendered loose text buttons: [العربية] [🔔] [Cedric Regis JR] [Set up 2FA] [Sign out].
+  • V2 Implementation :
+    Consolidated into a sleek, accessible Account Drawer:
+    <details class="hx-account" data-hx-account>
+      <summary class="hx-iconbtn hx-account__toggle" aria-label="Account: Cedrick Regis JR">
+        <svg class="hx-icon"><use href="#i-user"/></svg>
+        <span class="hx-account__name">Cedrick Regis JR</span>
+      </summary>
+      <div class="hx-account__menu">
+        <p class="hx-account__who">Cedrick Regis JR</p>
+        <a class="hx-menu__item" href="/mfa/setup"><svg class="hx-icon"><use href="#i-shield"/></svg>2FA</a>
+        <form method="post" action="/logout"><button type="submit" class="hx-menu__item">Sign out</button></form>
+      </div>
+    </details>
+    Accompanied by SVG symbol sprite integration (#i-menu, #i-globe, #i-bell, #i-user, #i-logout).
+
+  [DEFECT UX-05 : OPEN] PASSIVE EMPTY STATES
+  ───────────────────────────────────────────────────────────────────────────────────────────────
+  • Location : Tables with Zero Records (/leave, /attendance, /approvals, /assets)
+  • Current State :
+    Cards still contain passive copy:
+    <div class="hx-empty"><p class="hx-empty__title">No leave requests</p>...</div>
+  • Impact :
+    HR coordinators must navigate away from empty tables to header menus to trigger creation.
+  • Recommended Action :
+    Embed primary actionable CTAs directly within all .hx-empty containers.
+
+
+┌──────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 4. ACCESSIBILITY (WCAG 2.1 AA) & RESPONSIVE ADVANCEMENTS IN V2                                   │
+└──────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+  1. Focus Management (WCAG 2.4.3 & 2.1.2) — FULLY RESOLVED:
+     - Implemented complete focus trapping inside mobile drawer (#hx-sidebar).
+     - Applied HTML5 .inert to .hx-main while sidebar is active.
+     - Implemented Escape key handling with focus restoration directly to [data-hx-sidebar-toggle].
+  2. Cross-Field ARIA Range Validation — NEW FEATURE:
+     - helix.js now binds [data-hx-range] forms (date range pickers).
+     - Dynamic aria-invalid="true" and aria-describedby associations for inline feedback.
+  3. Form Submissions & Loading States:
+     - Forms with [data-hx-loading] dynamically inject accessible spinner badges and set aria-busy="true".
+  4. Brand Lockup & SVG Sprites:
+     - High-performance embedded SVG sprite sheet replaced legacy unstyled icon links.
+     - Brand lockup preloads Latin woff2 font families (Inter and Chakra Petch).
+
+
+┌──────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 5. REVISED IMPLEMENTATION ROADMAP & REMAINING ACTION ITEMS                                       │
+└──────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+  ┌───────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ SPRINT 1 : REMAINING CRITICAL & MAJOR DEFECTS (Target: 3 Business Days)                       │
+  ├───────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ [R-1] Replace ISO-2 Country Input with Searchable Select Dropdown (UX-02)                     │
+  │ [R-2] Replace window.confirm() with Accessible Stylized Modal Dialog (UX-03)                  │
+  │ [R-3] Add Direct Call-to-Action Buttons inside Empty State Cards (UX-05)                      │
+  └───────────────────────────────────────────────────────────────────────────────────────────────┘
+
+  ┌───────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ SPRINT 2 : FORM ACCESSIBILITY & UNLINKED USER GUARDS (Target: 5 Business Days)                │
+  ├───────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ [R-4] Attach Programmatic <label for="..."> associations to Checkbox Filters (A11Y-01)        │
+  │ [R-5] Build Fallback In-App Account Linking Wizard for Unlinked Admin Profiles                │
+  │ [R-6] Implement Responsive Card-Stack Layout for Mobile Audit & Shift Tables                  │
+  └───────────────────────────────────────────────────────────────────────────────────────────────┘
+
+====================================================================================================
+                        End of Quality Assurance Audit Report V2
+====================================================================================================

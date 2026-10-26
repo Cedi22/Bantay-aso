@@ -1,0 +1,984 @@
+{
+  "/": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/",
+    "size": 16538,
+    "h1": [
+      "Dashboard"
+    ],
+    "h2_count": 6,
+    "tables_count": 4,
+    "tables_scope_ok": true,
+    "forms_count": 3,
+    "inputs_count": 5,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 4,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/me": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/me",
+    "size": 9914,
+    "h1": [
+      "Welcome, Cedrick"
+    ],
+    "h2_count": 3,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 3,
+    "inputs_count": 5,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 4,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/team": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/team",
+    "size": 9479,
+    "h1": [
+      "My team"
+    ],
+    "h2_count": 2,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 3,
+    "inputs_count": 5,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 4,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/attendance/me": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/attendance/me",
+    "size": 9731,
+    "h1": [
+      "My attendance"
+    ],
+    "h2_count": 2,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 5,
+    "inputs_count": 9,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 6,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/me/documents": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/me/documents",
+    "size": 9232,
+    "h1": [
+      "My documents"
+    ],
+    "h2_count": 2,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 3,
+    "inputs_count": 5,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 4,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/me/onboarding": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/me/onboarding",
+    "size": 8747,
+    "h1": [
+      "My onboarding"
+    ],
+    "h2_count": 0,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 3,
+    "inputs_count": 5,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 4,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/me/performance": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/me/performance",
+    "size": 8983,
+    "h1": [
+      "My performance"
+    ],
+    "h2_count": 2,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 3,
+    "inputs_count": 5,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 4,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/me/training": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/me/training",
+    "size": 8943,
+    "h1": [
+      "My training"
+    ],
+    "h2_count": 2,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 3,
+    "inputs_count": 5,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 4,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/me/payslips": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/me/payslips",
+    "size": 8872,
+    "h1": [
+      "My payslips"
+    ],
+    "h2_count": 0,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 3,
+    "inputs_count": 5,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 4,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/me/policies": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/me/policies",
+    "size": 8712,
+    "h1": [
+      "Company policies"
+    ],
+    "h2_count": 0,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 3,
+    "inputs_count": 5,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 4,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/me/assets": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/me/assets",
+    "size": 8648,
+    "h1": [
+      "My assets"
+    ],
+    "h2_count": 0,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 3,
+    "inputs_count": 5,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 4,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/employees": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/employees",
+    "size": 27849,
+    "h1": [
+      "Employees"
+    ],
+    "h2_count": 0,
+    "tables_count": 1,
+    "tables_scope_ok": true,
+    "forms_count": 4,
+    "inputs_count": 6,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 5,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/employees/create": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/employees/create",
+    "size": 22961,
+    "h1": [
+      "Add employee"
+    ],
+    "h2_count": 2,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 4,
+    "inputs_count": 18,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 5,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/leave": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/leave",
+    "size": 9583,
+    "h1": [
+      "Leave"
+    ],
+    "h2_count": 0,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 4,
+    "inputs_count": 5,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 5,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/leave/calendar": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/leave/calendar",
+    "size": 13564,
+    "h1": [
+      "Leave calendar \u00b7 October 2026"
+    ],
+    "h2_count": 0,
+    "tables_count": 1,
+    "tables_scope_ok": true,
+    "forms_count": 3,
+    "inputs_count": 5,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 4,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/attendance": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/attendance",
+    "size": 12662,
+    "h1": [
+      "Attendance"
+    ],
+    "h2_count": 2,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 6,
+    "inputs_count": 19,
+    "orphan_inputs_count": 2,
+    "orphan_samples": [
+      "<input type=\"checkbox\" name=\"exceptions\" value=\"1\">",
+      "<input type=\"checkbox\" name=\"acknowledge\" value=\"1\">"
+    ],
+    "buttons_count": 7,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/recruitment": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/recruitment",
+    "size": 14861,
+    "h1": [
+      "Recruitment"
+    ],
+    "h2_count": 2,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 5,
+    "inputs_count": 9,
+    "orphan_inputs_count": 1,
+    "orphan_samples": [
+      "<input type=\"checkbox\" name=\"open_now\" value=\"1\" checked>"
+    ],
+    "buttons_count": 6,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/training": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/training",
+    "size": 10530,
+    "h1": [
+      "Training"
+    ],
+    "h2_count": 2,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 4,
+    "inputs_count": 10,
+    "orphan_inputs_count": 1,
+    "orphan_samples": [
+      "<input type=\"checkbox\" name=\"is_mandatory\" value=\"1\">"
+    ],
+    "buttons_count": 5,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/shifts": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/shifts",
+    "size": 15773,
+    "h1": [
+      "Shift schedule"
+    ],
+    "h2_count": 0,
+    "tables_count": 1,
+    "tables_scope_ok": true,
+    "forms_count": 4,
+    "inputs_count": 6,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 5,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/performance": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/performance",
+    "size": 17776,
+    "h1": [
+      "Performance"
+    ],
+    "h2_count": 2,
+    "tables_count": 1,
+    "tables_scope_ok": true,
+    "forms_count": 4,
+    "inputs_count": 9,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 5,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/onboarding": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/onboarding",
+    "size": 12812,
+    "h1": [
+      "Onboarding"
+    ],
+    "h2_count": 1,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 5,
+    "inputs_count": 7,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 6,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/offboarding": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/offboarding",
+    "size": 13004,
+    "h1": [
+      "Offboarding"
+    ],
+    "h2_count": 2,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 4,
+    "inputs_count": 8,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 5,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/reports": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/reports",
+    "size": 9224,
+    "h1": [
+      "Reports"
+    ],
+    "h2_count": 0,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 3,
+    "inputs_count": 5,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 4,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/approvals": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/approvals",
+    "size": 9129,
+    "h1": [
+      "Approvals"
+    ],
+    "h2_count": 1,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 3,
+    "inputs_count": 5,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 4,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/intelligence": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/intelligence",
+    "size": 24952,
+    "h1": [
+      "H3LIX Intelligence"
+    ],
+    "h2_count": 9,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 12,
+    "inputs_count": 23,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 13,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/organization": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/organization",
+    "size": 26081,
+    "h1": [
+      "Organization"
+    ],
+    "h2_count": 4,
+    "tables_count": 4,
+    "tables_scope_ok": true,
+    "forms_count": 3,
+    "inputs_count": 5,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 4,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/documents/expiring": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/documents/expiring",
+    "size": 9682,
+    "h1": [
+      "Expiring documents"
+    ],
+    "h2_count": 3,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 4,
+    "inputs_count": 6,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 5,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/privacy": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/privacy",
+    "size": 10225,
+    "h1": [
+      "Privacy notice"
+    ],
+    "h2_count": 5,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 3,
+    "inputs_count": 5,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 4,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/admin/users": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/admin/users",
+    "size": 10485,
+    "h1": [
+      "Users"
+    ],
+    "h2_count": 0,
+    "tables_count": 1,
+    "tables_scope_ok": true,
+    "forms_count": 3,
+    "inputs_count": 5,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 4,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/admin/users/create": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/admin/users/create",
+    "size": 14086,
+    "h1": [
+      "New user"
+    ],
+    "h2_count": 0,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 4,
+    "inputs_count": 17,
+    "orphan_inputs_count": 8,
+    "orphan_samples": [
+      "<input type=\"checkbox\" name=\"roles[]\" value=\"5\">",
+      "<input type=\"checkbox\" name=\"roles[]\" value=\"6\">",
+      "<input type=\"checkbox\" name=\"roles[]\" value=\"2\">"
+    ],
+    "buttons_count": 5,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/devices": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/devices",
+    "size": 9108,
+    "h1": [
+      "Attendance devices"
+    ],
+    "h2_count": 0,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 3,
+    "inputs_count": 5,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 4,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/admin/audit": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/admin/audit",
+    "size": 18259,
+    "h1": [
+      "Audit log"
+    ],
+    "h2_count": 1,
+    "tables_count": 1,
+    "tables_scope_ok": true,
+    "forms_count": 4,
+    "inputs_count": 9,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 5,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/admin/roles": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/admin/roles",
+    "size": 15171,
+    "h1": [
+      "Roles"
+    ],
+    "h2_count": 6,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 3,
+    "inputs_count": 5,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 4,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/assets": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/assets",
+    "size": 12217,
+    "h1": [
+      "Assets"
+    ],
+    "h2_count": 1,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 5,
+    "inputs_count": 12,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 6,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/compliance": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/compliance",
+    "size": 10355,
+    "h1": [
+      "Compliance"
+    ],
+    "h2_count": 3,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 3,
+    "inputs_count": 5,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 4,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/notifications": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/notifications",
+    "size": 9043,
+    "h1": [
+      "Notifications"
+    ],
+    "h2_count": 0,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 4,
+    "inputs_count": 6,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 5,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/mfa/setup": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/mfa/setup",
+    "size": 82985,
+    "h1": [
+      "S3curity H3LIX"
+    ],
+    "h2_count": 1,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 3,
+    "inputs_count": 6,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 3,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/payroll": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/payroll/setup",
+    "size": 9469,
+    "h1": [
+      "Payroll setup"
+    ],
+    "h2_count": 0,
+    "tables_count": 1,
+    "tables_scope_ok": true,
+    "forms_count": 3,
+    "inputs_count": 5,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 4,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/payroll/setup": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/payroll/setup",
+    "size": 9469,
+    "h1": [
+      "Payroll setup"
+    ],
+    "h2_count": 0,
+    "tables_count": 1,
+    "tables_scope_ok": true,
+    "forms_count": 3,
+    "inputs_count": 5,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 4,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/payroll/setup/1?step=1": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/payroll/setup/1?step=1",
+    "size": 12225,
+    "h1": [
+      "Payroll setup \u00b7 H3LIX Demo Trading W.L.L."
+    ],
+    "h2_count": 1,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 4,
+    "inputs_count": 12,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 5,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/payroll/setup/1?step=2": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/payroll/setup/1?step=2",
+    "size": 12059,
+    "h1": [
+      "Payroll setup \u00b7 H3LIX Demo Trading W.L.L."
+    ],
+    "h2_count": 1,
+    "tables_count": 1,
+    "tables_scope_ok": true,
+    "forms_count": 5,
+    "inputs_count": 7,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 6,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/payroll/setup/1?step=3": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/payroll/setup/1?step=3",
+    "size": 28516,
+    "h1": [
+      "Payroll setup \u00b7 H3LIX Demo Trading W.L.L."
+    ],
+    "h2_count": 1,
+    "tables_count": 1,
+    "tables_scope_ok": true,
+    "forms_count": 4,
+    "inputs_count": 11,
+    "orphan_inputs_count": 1,
+    "orphan_samples": [
+      "<input type=\"checkbox\" name=\"confirm\" value=\"1\" required>"
+    ],
+    "buttons_count": 5,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/payroll/setup/1?step=4": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/payroll/setup/1?step=4",
+    "size": 11569,
+    "h1": [
+      "Payroll setup \u00b7 H3LIX Demo Trading W.L.L."
+    ],
+    "h2_count": 1,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 4,
+    "inputs_count": 7,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 5,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/payroll/setup/1?step=5": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/payroll/setup/1?step=5",
+    "size": 16946,
+    "h1": [
+      "Payroll setup \u00b7 H3LIX Demo Trading W.L.L."
+    ],
+    "h2_count": 1,
+    "tables_count": 1,
+    "tables_scope_ok": true,
+    "forms_count": 4,
+    "inputs_count": 6,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 5,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/payroll/setup/1?step=6": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/payroll/setup/1?step=6",
+    "size": 10985,
+    "h1": [
+      "Payroll setup \u00b7 H3LIX Demo Trading W.L.L."
+    ],
+    "h2_count": 1,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 4,
+    "inputs_count": 7,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 5,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/payroll/setup/1?step=7": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/payroll/setup/1?step=7",
+    "size": 11408,
+    "h1": [
+      "Payroll setup \u00b7 H3LIX Demo Trading W.L.L."
+    ],
+    "h2_count": 1,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 4,
+    "inputs_count": 10,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 5,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/payroll/setup/1?step=8": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/payroll/setup/1?step=8",
+    "size": 11179,
+    "h1": [
+      "Payroll setup \u00b7 H3LIX Demo Trading W.L.L."
+    ],
+    "h2_count": 1,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 4,
+    "inputs_count": 6,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 5,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/payroll/setup/2?step=1": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/payroll/setup/2?step=1",
+    "size": 12226,
+    "h1": [
+      "Payroll setup \u00b7 H3LIX Demo Services W.L.L."
+    ],
+    "h2_count": 1,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 4,
+    "inputs_count": 12,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 5,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/payroll/setup/2?step=2": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/payroll/setup/2?step=2",
+    "size": 12060,
+    "h1": [
+      "Payroll setup \u00b7 H3LIX Demo Services W.L.L."
+    ],
+    "h2_count": 1,
+    "tables_count": 1,
+    "tables_scope_ok": true,
+    "forms_count": 5,
+    "inputs_count": 7,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 6,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/payroll/setup/2?step=3": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/payroll/setup/2?step=3",
+    "size": 28517,
+    "h1": [
+      "Payroll setup \u00b7 H3LIX Demo Services W.L.L."
+    ],
+    "h2_count": 1,
+    "tables_count": 1,
+    "tables_scope_ok": true,
+    "forms_count": 4,
+    "inputs_count": 11,
+    "orphan_inputs_count": 1,
+    "orphan_samples": [
+      "<input type=\"checkbox\" name=\"confirm\" value=\"1\" required>"
+    ],
+    "buttons_count": 5,
+    "has_combobox": true,
+    "has_dialog": false
+  },
+  "/css/helix.css": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/css/helix.css",
+    "size": 39691,
+    "h1": [],
+    "h2_count": 0,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 0,
+    "inputs_count": 0,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 0,
+    "has_combobox": false,
+    "has_dialog": false
+  },
+  "/js/helix.js": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/js/helix.js",
+    "size": 9187,
+    "h1": [],
+    "h2_count": 0,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 0,
+    "inputs_count": 0,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 0,
+    "has_combobox": false,
+    "has_dialog": false
+  },
+  "/js/combobox.js": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/js/combobox.js",
+    "size": 10123,
+    "h1": [],
+    "h2_count": 0,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 0,
+    "inputs_count": 2,
+    "orphan_inputs_count": 2,
+    "orphan_samples": [
+      "<input data-hx-global-search>",
+      "<input data-hx-checklist-filter=\"#id\">"
+    ],
+    "buttons_count": 0,
+    "has_combobox": false,
+    "has_dialog": false
+  },
+  "/fonts/fonts.css": {
+    "status": 200,
+    "final_url": "https://hrms-dev.s3curity.net/fonts/fonts.css",
+    "size": 9976,
+    "h1": [],
+    "h2_count": 0,
+    "tables_count": 0,
+    "tables_scope_ok": true,
+    "forms_count": 0,
+    "inputs_count": 0,
+    "orphan_inputs_count": 0,
+    "orphan_samples": [],
+    "buttons_count": 0,
+    "has_combobox": false,
+    "has_dialog": false
+  }
+}

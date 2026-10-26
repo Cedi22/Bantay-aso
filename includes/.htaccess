@@ -1,0 +1,23 @@
+# ==============================================================================
+# Bantay Aso — Includes Directory Hardening Killswitch
+# Strictly denies all HTTP requests and prevents direct script execution
+# ==============================================================================
+
+Options -Indexes -ExecCGI
+
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+    Deny from all
+</IfModule>
+
+<IfModule mod_php.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php7.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php8.c>
+    php_flag engine off
+</IfModule>

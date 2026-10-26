@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Payroll setup · S3curity H3LIX</title>
+<meta name="description" content="S3curity H3LIX — People. Connected. Evolved. Enterprise Human Capital Management by S3curity Net.">
+<meta name="application-name" content="S3curity H3LIX">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#04070d">
+<link rel="icon" href="/images/brand/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/inter-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/chakra-petch-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css" nonce="sDX6h6XSZoArWETMJPd0feTh">
+<link rel="stylesheet" href="/css/helix.css" nonce="sDX6h6XSZoArWETMJPd0feTh">
+<script src="/js/helix.js" defer nonce="sDX6h6XSZoArWETMJPd0feTh"></script>
+<script src="/js/combobox.js" defer nonce="sDX6h6XSZoArWETMJPd0feTh"></script>
+</head>
+<body class="hx-app">
+<svg class="hx-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 17V11a6 6 0 0 1 12 0v6l2 2H4z"/><path d="M10 21h4"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z"/><path d="M3 12h18M12 3c2.5 2.5 3.5 5.5 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-5.5-3.5-9s1-6.5 3.5-9z"/></symbol>
+  <symbol id="i-logout" viewBox="0 0 24 24"><path d="M14 4H5v16h9"/><path d="M10 12h10M16 8l4 4-4 4"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><path d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14z"/><path d="M16 16l5 5"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+</svg>
+<a class="hx-skip" href="#main">Skip to content</a>
+<aside class="hx-sidebar" id="hx-sidebar" aria-label="Menu">
+  <button class="hx-iconbtn hx-sidebar__close" type="button" data-hx-sidebar-close aria-label="Close menu"><svg class="hx-icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+  <a class="hx-sidebar__brand" href="/" aria-label="S3curity H3LIX"><span class="hx-lockup "><img class="hx-lockup__mark" src="/images/brand/h3lix-emblem.svg" alt="" width="48" height="48"><span class="hx-lockup__text"><span class="hx-lockup__parent">S3curity</span><span class="hx-visually-hidden"> </span><span class="hx-lockup__product">H<b>3</b>LIX</span></span></span>
+</a>
+  <nav class="hx-nav" aria-label="Main">
+      <p class="hx-nav__section">Me</p>
+          <a class="hx-nav__link" href="/me">My workspace</a>
+          <a class="hx-nav__link" href="/team">My team</a>
+          <a class="hx-nav__link" href="/attendance/me">My attendance</a>
+          <a class="hx-nav__link" href="/me/documents">My documents</a>
+          <a class="hx-nav__link" href="/me/payslips">My payslips</a>
+          <a class="hx-nav__link" href="/me/onboarding">My onboarding</a>
+          <a class="hx-nav__link" href="/me/performance">My performance</a>
+          <a class="hx-nav__link" href="/me/training">My training</a>
+          <a class="hx-nav__link" href="/me/policies">Company policies</a>
+          <a class="hx-nav__link" href="/me/assets">My assets</a>
+          <a class="hx-nav__link" href="/notifications">Notifications</a>
+          <p class="hx-nav__section">Workspace</p>
+          <a class="hx-nav__link" href="/">Dashboard</a>
+          <a class="hx-nav__link" href="/employees">Employees</a>
+          <a class="hx-nav__link" href="/organization">Organization</a>
+          <a class="hx-nav__link" href="/recruitment">Recruitment</a>
+          <a class="hx-nav__link" href="/onboarding">Onboarding</a>
+          <a class="hx-nav__link" href="/attendance">Attendance</a>
+          <a class="hx-nav__link" href="/shifts">Shifts</a>
+          <a class="hx-nav__link" href="/leave">Leave</a>
+          <a class="hx-nav__link is-active" href="/payroll" aria-current="page">Payroll</a>
+          <a class="hx-nav__link" href="/performance">Performance</a>
+          <a class="hx-nav__link" href="/training">Training</a>
+          <a class="hx-nav__link" href="/assets">Assets</a>
+          <a class="hx-nav__link" href="/compliance">Compliance</a>
+          <a class="hx-nav__link" href="/offboarding">Offboarding</a>
+          <a class="hx-nav__link" href="/reports">Reports</a>
+          <a class="hx-nav__link" href="/approvals">Approvals</a>
+          <p class="hx-nav__section">Platform</p>
+          <a class="hx-nav__link" href="/intelligence">H3LIX Intelligence</a>
+          <a class="hx-nav__link" href="/admin/users">Administration</a>
+          <a class="hx-nav__link" href="/devices">Attendance devices</a>
+          <a class="hx-nav__link" href="/admin/audit">Audit log</a>
+          <a class="hx-nav__link" href="/admin/roles">Roles &amp; permissions</a>
+          <span class="hx-nav__link is-planned" aria-disabled="true">Settings <span class="hx-badge hx-badge--planned">Planned</span></span>
+        </nav>
+</aside>
+<div class="hx-main">
+  <header class="hx-topbar">
+    <button class="hx-iconbtn hx-topbar__toggle" type="button" data-hx-sidebar-toggle aria-controls="hx-sidebar" aria-expanded="false" aria-label="Menu"><svg class="hx-icon" aria-hidden="true"><use href="#i-menu"/></svg></button>
+    <div class="hx-topbar__title">Payroll setup</div>
+        <form class="hx-search" role="search" method="get" action="/employees">
+      <label class="hx-visually-hidden" for="hx-global-search">Search employees</label>
+      <svg class="hx-icon hx-icon--sm hx-search__icon" aria-hidden="true"><use href="#i-search"/></svg>
+      <input class="hx-input hx-input--sm" id="hx-global-search" name="q" type="search" maxlength="60" placeholder="Search employees" data-hx-global-search
+        data-hx-none="No matches" data-hx-count=":n results" data-hx-error="Search is unavailable. Use the list instead.">
+    </form>
+    <a class="hx-iconbtn hx-search__mobile" href="/employees" aria-label="Search employees"><svg class="hx-icon" aria-hidden="true"><use href="#i-search"/></svg></a>
+        <div class="hx-topbar__user">
+      <form method="post" action="/locale" class="hx-inline hx-locale">
+  <input type="hidden" name="_csrf" value="d8da883ebd96082a07305611b96ae9cf186dd94c99015ceaaa2f2a9423b86cbe">  <input type="hidden" name="locale" value="ar">
+  <input type="hidden" name="back" value="/payroll/setup/2">
+  <button type="submit" class="hx-iconbtn" lang="ar" aria-label="Language: العربية"><svg class="hx-icon" aria-hidden="true"><use href="#i-globe"/></svg><span>العربية</span></button>
+</form>
+            <a class="hx-iconbtn" href="/notifications" aria-label="Notifications: 0 unread"><svg class="hx-icon" aria-hidden="true"><use href="#i-bell"/></svg></a>
+            <details class="hx-account" data-hx-account>
+        <summary class="hx-iconbtn hx-account__toggle" aria-label="Account: Cedrick Regis JR"><svg class="hx-icon" aria-hidden="true"><use href="#i-user"/></svg> <span class="hx-account__name">Cedrick Regis JR</span></summary>
+        <div class="hx-account__menu">
+          <p class="hx-account__who">Cedrick Regis JR</p>
+          <a class="hx-menu__item" href="/mfa/setup"><svg class="hx-icon" aria-hidden="true"><use href="#i-shield"/></svg>Set up two-factor authentication</a>          <form method="post" action="/logout" class="hx-inline">
+            <input type="hidden" name="_csrf" value="d8da883ebd96082a07305611b96ae9cf186dd94c99015ceaaa2f2a9423b86cbe">            <button type="submit" class="hx-menu__item"><svg class="hx-icon hx-icon--flip" aria-hidden="true"><use href="#i-logout"/></svg>Sign out</button>
+          </form>
+        </div>
+      </details>
+    </div>
+  </header>
+  <main class="hx-content" id="main" tabindex="-1">
+        <div class="hx-page-header">
+  <h1>Payroll setup · H3LIX Demo Services W.L.L.</h1>
+  <div class="hx-page-header__actions"><a class="hx-btn hx-btn--ghost" href="/payroll/setup">All companies</a></div>
+</div>
+<div class="hx-alert hx-alert--warning">Statutory payroll rules are not independently validated and are pending review by a Qatari labour lawyer. Progress is saved after each step; you can resume later.</div>
+<nav aria-label="Wizard steps"><ol class="hx-steps">
+  <li class=""><a href="/payroll/setup/2?step=1">1. Company payroll settings</a></li>
+  <li class=""><a href="/payroll/setup/2?step=2">2. Salary components</a></li>
+  <li class=""><a href="/payroll/setup/2?step=3" aria-current="step">3. Statutory rules review</a></li>
+  <li class=""><a href="/payroll/setup/2?step=4">4. Social insurance (GRSIA)</a></li>
+  <li class=""><a href="/payroll/setup/2?step=5">5. Employee pay data</a></li>
+  <li class=""><a href="/payroll/setup/2?step=6">6. Opening balances</a></li>
+  <li class=""><a href="/payroll/setup/2?step=7">7. Parallel test</a></li>
+  <li class=""><a href="/payroll/setup/2?step=8">8. Sign-off</a></li>
+</ol></nav>
+
+<section class="hx-card"><div class="hx-card__header"><h2 class="hx-card__title">3. Statutory rules review</h2>
+  </div><div class="hx-card__body">
+
+<p>Rule set QA v2 · effective from 2026-09-08 · <span class="hx-badge hx-badge--warning">Not independently validated</span></p>
+<div class="hx-table-wrap"><table class="hx-table"><thead><tr><th scope="col">Rule</th><th scope="col">Value</th><th scope="col">Legal source</th><th scope="col">Status</th></tr></thead><tbody>
+  <tr><td>Currency</td><td class="hx-mono">QAR </td>
+    <td>Qatar Riyal</td>
+    <td><span class="hx-badge hx-badge--muted">Convention</span></td></tr>
+  <tr><td>Pro-rata basis for partial months</td><td class="hx-mono">calendar_days </td>
+    <td>H3LIX convention (not a statutory value): calendar days of the month</td>
+    <td><span class="hx-badge hx-badge--muted">Convention</span></td></tr>
+  <tr><td>Daily-rate divisor (leave encashment, per-day items)</td><td class="hx-mono">30 days</td>
+    <td>Labour Law No. 14/2004 Art. 8 (month = 30 days); divisor itself is a convention · <a href="https://almeezan.qa/legislations/law/2004/14/general" rel="noopener noreferrer" target="_blank">source</a> (2026-10-12)</td>
+    <td><span class="hx-badge hx-badge--warning">Lawyer question</span> LQ-GR</td></tr>
+  <tr><td>Hours per day for the hourly rate</td><td class="hx-mono">8 h</td>
+    <td>Labour Law Art. 73 (8 h/day); hourly divisor is a convention · <a href="https://almeezan.qa/legislations/law/2004/14/general" rel="noopener noreferrer" target="_blank">source</a> (2026-10-12)</td>
+    <td><span class="hx-badge hx-badge--muted">Convention</span></td></tr>
+  <tr><td>Days per month for the hourly rate</td><td class="hx-mono">30 days</td>
+    <td>H3LIX convention (not a statutory value)</td>
+    <td><span class="hx-badge hx-badge--muted">Convention</span></td></tr>
+  <tr><td>Overtime multiplier</td><td class="hx-mono">1.25 ×</td>
+    <td>Labour Law Art. 74: basic hourly wage + at least 25% · <a href="https://almeezan.qa/legislations/law/2004/14/general" rel="noopener noreferrer" target="_blank">source</a> (2026-10-12)</td>
+    <td><span class="hx-badge hx-badge--info">Statutory</span></td></tr>
+  <tr><td>Night overtime multiplier <span class="hx-muted">(PF-Q1)</span></td><td class="hx-mono">1.50 ×</td>
+    <td>Labour Law Art. 74: work 21:00–03:00, basic wage + at least 50% (not shift workers) · <a href="https://almeezan.qa/legislations/law/2004/14/general" rel="noopener noreferrer" target="_blank">source</a> (2026-10-12)</td>
+    <td><span class="hx-badge hx-badge--info">Statutory</span> LQ-NIGHT</td></tr>
+  <tr><td>Unpaid-leave deduction basis</td><td class="hx-mono">gross basic|gross</td>
+    <td>H3LIX convention (not a statutory value)</td>
+    <td><span class="hx-badge hx-badge--muted">Convention</span></td></tr>
+  <tr><td>Unpaid-leave divisor</td><td class="hx-mono">30 days</td>
+    <td>H3LIX convention (not a statutory value) (Art. 8: month = 30 days) · <a href="https://almeezan.qa/legislations/law/2004/14/general" rel="noopener noreferrer" target="_blank">source</a> (2026-10-12)</td>
+    <td><span class="hx-badge hx-badge--muted">Convention</span></td></tr>
+  <tr><td>Gratuity weeks per year of service</td><td class="hx-mono">3 weeks</td>
+    <td>Labour Law Art. 54 (at least 3 weeks) · <a href="https://almeezan.qa/legislations/law/2004/14/general" rel="noopener noreferrer" target="_blank">source</a> (2026-10-12)</td>
+    <td><span class="hx-badge hx-badge--info">Statutory</span> LQ-GR</td></tr>
+  <tr><td>Days per gratuity week <span class="hx-muted">(PF-Q8)</span></td><td class="hx-mono">7 days</td>
+    <td>Labour Law Art. 54 (&quot;weeks&quot;; calendar vs working days is open) · <a href="https://almeezan.qa/legislations/law/2004/14/general" rel="noopener noreferrer" target="_blank">source</a> (2026-10-12)</td>
+    <td><span class="hx-badge hx-badge--warning">Lawyer question</span> LQ-GR</td></tr>
+  <tr><td>Gratuity minimum service</td><td class="hx-mono">12 months</td>
+    <td>Labour Law Art. 54 (one year) · <a href="https://almeezan.qa/legislations/law/2004/14/general" rel="noopener noreferrer" target="_blank">source</a> (2026-10-12)</td>
+    <td><span class="hx-badge hx-badge--info">Statutory</span></td></tr>
+  <tr><td>Gratuity basis</td><td class="hx-mono">last_basic </td>
+    <td>Labour Law Art. 54 (last basic wage) · <a href="https://almeezan.qa/legislations/law/2004/14/general" rel="noopener noreferrer" target="_blank">source</a> (2026-10-12)</td>
+    <td><span class="hx-badge hx-badge--info">Statutory</span></td></tr>
+  <tr><td>Personal income tax</td><td class="hx-mono">none </td>
+    <td>No personal income tax on employment income in Qatar</td>
+    <td><span class="hx-badge hx-badge--muted">Convention</span></td></tr>
+  <tr><td>Social insurance for non-GCC expatriates</td><td class="hx-mono">none </td>
+    <td>Law No. 1/2022 Art. 2 (nationals only); gratuity applies instead · <a href="https://almeezan.qa/legislations/law/2022/1/general" rel="noopener noreferrer" target="_blank">source</a> (2026-10-12)</td>
+    <td><span class="hx-badge hx-badge--info">Statutory</span></td></tr>
+  <tr><td>Rule-pack schema</td><td class="hx-mono">2 </td>
+    <td>H3LIX internal (2 = PF-Q1…PF-Q8 implemented)</td>
+    <td><span class="hx-badge hx-badge--muted">Convention</span></td></tr>
+  <tr><td>Rest-day work multiplier <span class="hx-muted">(PF-Q2)</span></td><td class="hx-mono">2.50 ×</td>
+    <td>Labour Law Art. 75: basic wage + at least 150% (≥ 2.5 × basic hourly rate) · <a href="https://almeezan.qa/legislations/law/2004/14/general" rel="noopener noreferrer" target="_blank">source</a> (2026-10-12)</td>
+    <td><span class="hx-badge hx-badge--info">Statutory</span> LQ-RD</td></tr>
+  <tr><td>Public-holiday work multiplier <span class="hx-muted">(PF-Q3)</span></td><td class="hx-mono">1.25 ×</td>
+    <td>Labour Law Art. 78 last para. refers to Art. 74 (literal reading: + 25%) · <a href="https://almeezan.qa/legislations/law/2004/14/general" rel="noopener noreferrer" target="_blank">source</a> (2026-10-12)</td>
+    <td><span class="hx-badge hx-badge--warning">Lawyer question</span> LQ-PH</td></tr>
+  <tr><td>Split overtime in the night window <span class="hx-muted">(PF-Q1)</span></td><td class="hx-mono">on </td>
+    <td>Labour Law Art. 74 · <a href="https://almeezan.qa/legislations/law/2004/14/general" rel="noopener noreferrer" target="_blank">source</a> (2026-10-12)</td>
+    <td><span class="hx-badge hx-badge--info">Statutory</span> LQ-NIGHT</td></tr>
+  <tr><td>Night window start <span class="hx-muted">(PF-Q1)</span></td><td class="hx-mono">21:00 HH:MM</td>
+    <td>Labour Law Art. 74 (official Arabic text: 9 pm) · <a href="https://almeezan.qa/legislations/law/2004/14/general" rel="noopener noreferrer" target="_blank">source</a> (2026-10-12)</td>
+    <td><span class="hx-badge hx-badge--info">Statutory</span></td></tr>
+  <tr><td>Night window end <span class="hx-muted">(PF-Q1)</span></td><td class="hx-mono">03:00 HH:MM</td>
+    <td>Labour Law Art. 74 (official Arabic text: 3 am) · <a href="https://almeezan.qa/legislations/law/2004/14/general" rel="noopener noreferrer" target="_blank">source</a> (2026-10-12)</td>
+    <td><span class="hx-badge hx-badge--info">Statutory</span></td></tr>
+  <tr><td>Substitute rest day required (warning) <span class="hx-muted">(PF-Q2)</span></td><td class="hx-mono">1 flag</td>
+    <td>Labour Law Art. 75: a substitute rest day must be granted · <a href="https://almeezan.qa/legislations/law/2004/14/general" rel="noopener noreferrer" target="_blank">source</a> (2026-10-12)</td>
+    <td><span class="hx-badge hx-badge--info">Statutory</span></td></tr>
+  <tr><td>Deduction caps <span class="hx-muted">(PF-Q4)</span></td><td class="hx-mono">enforce enforce|warn</td>
+    <td>Labour Law Arts. 60, 70 · <a href="https://almeezan.qa/legislations/law/2004/14/general" rel="noopener noreferrer" target="_blank">source</a> (2026-10-12)</td>
+    <td><span class="hx-badge hx-badge--info">Statutory</span> LQ-DED</td></tr>
+  <tr><td>Max. total deductions (penalties and debts) <span class="hx-muted">(PF-Q4)</span></td><td class="hx-mono">50 % of wage</td>
+    <td>Labour Law Art. 70 (≤ 50%; excess carried to following months) · <a href="https://almeezan.qa/legislations/law/2004/14/general" rel="noopener noreferrer" target="_blank">source</a> (2026-10-12)</td>
+    <td><span class="hx-badge hx-badge--info">Statutory</span> LQ-DED</td></tr>
+  <tr><td>Max. employer-loan instalments <span class="hx-muted">(PF-Q4)</span></td><td class="hx-mono">10 % of wage</td>
+    <td>Labour Law Art. 70 (≤ 10%, interest-free) · <a href="https://almeezan.qa/legislations/law/2004/14/general" rel="noopener noreferrer" target="_blank">source</a> (2026-10-12)</td>
+    <td><span class="hx-badge hx-badge--info">Statutory</span> LQ-DED</td></tr>
+  <tr><td>Max. disciplinary deductions per month <span class="hx-muted">(PF-Q4)</span></td><td class="hx-mono">5 days&apos; wage</td>
+    <td>Labour Law Art. 60 (≤ 5 days&apos; wage per month) · <a href="https://almeezan.qa/legislations/law/2004/14/general" rel="noopener noreferrer" target="_blank">source</a> (2026-10-12)</td>
+    <td><span class="hx-badge hx-badge--info">Statutory</span></td></tr>
+  <tr><td>Salary advances count as loans for the 10% cap <span class="hx-muted">(PF-Q4)</span></td><td class="hx-mono">1 flag</td>
+    <td>H3LIX convention (not a statutory value) (conservative reading of Art. 70) · <a href="https://almeezan.qa/legislations/law/2004/14/general" rel="noopener noreferrer" target="_blank">source</a> (2026-10-12)</td>
+    <td><span class="hx-badge hx-badge--warning">Lawyer question</span> LQ-DED</td></tr>
+  <tr><td>GRSIA social insurance for nationals <span class="hx-muted">(PF-Q5)</span></td><td class="hx-mono">on </td>
+    <td>Law No. 1/2022 Arts. 2, 11 · <a href="https://almeezan.qa/legislations/law/2022/1/general" rel="noopener noreferrer" target="_blank">source</a> (2026-10-12)</td>
+    <td><span class="hx-badge hx-badge--info">Statutory</span> LQ-SI</td></tr>
+  <tr><td>Nationalities with GRSIA contributions <span class="hx-muted">(PF-Q5)</span></td><td class="hx-mono">QA ISO codes</td>
+    <td>Law No. 1/2022 Art. 2 (Qatari nationals); GCC nationals: Law No. 4/2007 — not computed · <a href="https://almeezan.qa/legislations/law/2022/1/general" rel="noopener noreferrer" target="_blank">source</a> (2026-10-12)</td>
+    <td><span class="hx-badge hx-badge--info">Statutory</span> LQ-GCC</td></tr>
+  <tr><td>GRSIA employee share <span class="hx-muted">(PF-Q5)</span></td><td class="hx-mono">7 %</td>
+    <td>Law No. 1/2022 Art. 11 (7%, withheld from the contribution salary) · <a href="https://almeezan.qa/legislations/law/2022/1/general" rel="noopener noreferrer" target="_blank">source</a> (2026-10-12)</td>
+    <td><span class="hx-badge hx-badge--info">Statutory</span></td></tr>
+  <tr><td>GRSIA employer share <span class="hx-muted">(PF-Q5)</span></td><td class="hx-mono">14 %</td>
+    <td>Law No. 1/2022 Art. 11 (14%) · <a href="https://almeezan.qa/legislations/law/2022/1/general" rel="noopener noreferrer" target="_blank">source</a> (2026-10-12)</td>
+    <td><span class="hx-badge hx-badge--info">Statutory</span></td></tr>
+  <tr><td>GRSIA contribution-salary cap <span class="hx-muted">(PF-Q5)</span></td><td class="hx-mono">100000 QAR/month</td>
+    <td>Law No. 1/2022 Art. 11 (QAR 100,000) · <a href="https://almeezan.qa/legislations/law/2022/1/general" rel="noopener noreferrer" target="_blank">source</a> (2026-10-12)</td>
+    <td><span class="hx-badge hx-badge--info">Statutory</span></td></tr>
+  <tr><td>Housing allowance counted in the GRSIA basis <span class="hx-muted">(PF-Q5)</span></td><td class="hx-mono">6000 QAR/month</td>
+    <td>Law No. 1/2022 Art. 12 (QAR 6,000) · <a href="https://almeezan.qa/legislations/law/2022/1/general" rel="noopener noreferrer" target="_blank">source</a> (2026-10-12)</td>
+    <td><span class="hx-badge hx-badge--info">Statutory</span></td></tr>
+  <tr><td>GRSIA minimum age <span class="hx-muted">(PF-Q5)</span></td><td class="hx-mono">18 years</td>
+    <td>Law No. 1/2022 Art. 3 (18 years) · <a href="https://almeezan.qa/legislations/law/2022/1/general" rel="noopener noreferrer" target="_blank">source</a> (2026-10-12)</td>
+    <td><span class="hx-badge hx-badge--info">Statutory</span> LQ-SI</td></tr>
+  <tr><td>GRSIA payment deadline (day of the following month) <span class="hx-muted">(PF-Q5)</span></td><td class="hx-mono">5 day</td>
+    <td>Law No. 1/2022 Art. 11 (by the 5th) · <a href="https://almeezan.qa/legislations/law/2022/1/general" rel="noopener noreferrer" target="_blank">source</a> (2026-10-12)</td>
+    <td><span class="hx-badge hx-badge--info">Statutory</span></td></tr>
+  <tr><td>Monthly wage due day <span class="hx-muted">(PF-Q6)</span></td><td class="hx-mono">1 day of month</td>
+    <td>MD No. 4/2015 Art. 2 as replaced by MD No. 50/2026 (in force 2026-09-08): due on the 1st · <a href="https://almeezan.qa/legislations/ministerial-decision/2026/50/labor-minister" rel="noopener noreferrer" target="_blank">source</a> (2026-10-12)</td>
+    <td><span class="hx-badge hx-badge--info">Statutory</span> LQ-WPS</td></tr>
+  <tr><td>WPS transfer deadline after the due date <span class="hx-muted">(PF-Q6)</span></td><td class="hx-mono">7 days</td>
+    <td>MD No. 4/2015 Art. 2 as replaced by MD No. 50/2026 (within 7 days) · <a href="https://almeezan.qa/legislations/ministerial-decision/2026/50/labor-minister" rel="noopener noreferrer" target="_blank">source</a> (2026-10-12)</td>
+    <td><span class="hx-badge hx-badge--info">Statutory</span> LQ-WPS</td></tr>
+  <tr><td>Gratuity day-rate divisor <span class="hx-muted">(PF-Q8)</span></td><td class="hx-mono">30 days</td>
+    <td>Labour Law Arts. 8, 54 (month = 30 days; divisor convention is open) · <a href="https://almeezan.qa/legislations/law/2004/14/general" rel="noopener noreferrer" target="_blank">source</a> (2026-10-12)</td>
+    <td><span class="hx-badge hx-badge--warning">Lawyer question</span> LQ-GR</td></tr>
+</tbody></table></div>
+<h3>Open questions for the lawyer (10)</h3>
+<ul><li><strong>LQ-NIGHT</strong> (PF-Q1): Does the Art. 74 night premium (21:00–03:00, +50%) apply only to overtime hours or to all hours worked in the window? How are &quot;shift workers&quot; (excluded) defined? H3LIX assumes approved overtime minutes are the last minutes before clock-out. <span class="hx-muted">Until answered: Overtime minutes inside 21:00–03:00 at 1.50; shift-worker exclusion is not applied automatically.</span></li><li><strong>LQ-RD</strong> (PF-Q2): Art. 75: for a monthly-paid worker whose rest day is already paid, is rest-day work paid at 2.5 × or 1.5 × the basic hourly rate on top of the salary? When may the employer instead grant only normal pay plus a substitute rest day? <span class="hx-muted">Until answered: 2.50 × basic hourly rate plus a substitute-rest-day warning.</span></li><li><strong>LQ-PH</strong> (PF-Q3): Art. 78 (work on a public holiday) refers to Art. 74. Is the premium +25% (+50% at night) of the basic wage, or the Art. 75 rule (+150% or a substitute day)? <span class="hx-muted">Until answered: 1.25 (literal reading); configurable 1.25–5.</span></li><li><strong>LQ-DED</strong> (PF-Q4): Art. 70 caps: is &quot;wage&quot; the gross monthly wage incl. overtime and variable pay or the contractual wage? Do statutory GRSIA contributions and unpaid-leave non-payment count towards the 50%? Are salary advances &quot;loans&quot; for the 10% cap? May disciplinary deductions above 5 days (Art. 60) be carried forward? <span class="hx-muted">Until answered: Wage = gross earnings − unpaid leave; GRSIA excluded; advances included; disciplinary excess dropped; loan/advance instalments carried forward whole.</span></li><li><strong>LQ-SI</strong> (PF-Q5): Law No. 1/2022: exact commencement date; contribution salary for partial months and unpaid leave; meaning of &quot;social allowance&quot;; effect of the Art. 3 one-year permanent-job condition; any State subsidy of the employer share (Art. 11); interaction with the Art. 54 gratuity. <span class="hx-muted">Until answered: Contributions from rule set QA v2 (2026-09-08), pro-rated by calendar days, unpaid leave does not reduce the basis.</span></li><li><strong>LQ-GCC</strong> (PF-Q5): GCC nationals (Law No. 4/2007, amended by Law No. 5/2021 — amendment not read): which home-state rates apply and how is the employer share limited to the Qatari rate? <span class="hx-muted">Until answered: Not computed; the run shows a warning for each GCC national.</span></li><li><strong>LQ-WPS</strong> (PF-Q6): MD No. 50/2026: is the wage for month M due on the 1st of month M+1, and is the 7-day WPS window counted from that day (transfer by the 8th)? <span class="hx-muted">Until answered: Due on the 1st of the next month; WPS transfer by due date + 7 days.</span></li><li><strong>LQ-MW</strong> (PF-Q7): Is the QAR 1,000 minimum wage (MD No. 25/2020) the &quot;basic wage&quot; under Art. 1 and Art. 54? Any revision since 2020? <span class="hx-muted">Until answered: Salary entry refuses a basic wage below QAR 1,000 (QA-MW-01).</span></li><li><strong>LQ-GR</strong> (PF-Q8): Gratuity day rate: monthly basic ÷ 30 (Art. 8), ÷ 26 or × 12 ÷ 365? Are the 3 &quot;weeks&quot; 21 calendar days or 15/18 working days? <span class="hx-muted">Until answered: basic ÷ 30 × 21 days per year of service, pro-rated for fractions of a year.</span></li><li><strong>LQ-LEAVE</strong>: Leave encashment (Art. 81) and annual-leave pay: basic wage only, or basic plus fixed allowances? <span class="hx-muted">Until answered: Basic only; components flagged &quot;in leave-pay basis&quot; are added (schema 2).</span></li></ul>
+<form class="hx-form" method="post" action="/payroll/setup/2/rules"><input type="hidden" name="_csrf" value="d8da883ebd96082a07305611b96ae9cf186dd94c99015ceaaa2f2a9423b86cbe">  <label class="hx-check"><input type="checkbox" name="confirm" value="1" required> I have reviewed every rule, its source and its status, and I understand that the values are not independently validated.</label>
+  <div class="hx-field"><label class="hx-label" for="w_note">Note</label><input class="hx-input" id="w_note" name="note" maxlength="500"></div>
+  <div class="hx-form__row">
+    <div class="hx-field"><label class="hx-label" for="w_law">Lawyer who signed off (if available)</label><input class="hx-input" id="w_law" name="lawyer_name" maxlength="160"></div>
+    <div class="hx-field"><label class="hx-label" for="w_lawd">Sign-off date</label><input class="hx-input" id="w_lawd" name="lawyer_signed_on" type="date"></div>
+    <div class="hx-field"><label class="hx-label" for="w_lawr">Reference</label><input class="hx-input" id="w_lawr" name="lawyer_reference" maxlength="160"></div>
+  </div>
+  <div class="hx-form__actions"><button class="hx-btn hx-btn--primary" type="submit">Acknowledge and continue</button></div>
+</form>
+
+</div></section>
+  </main>
+  <footer class="hx-footer">Powered by S3curity Net · S3curity H3LIX v0.2.0 · <a href="/privacy">Privacy notice</a></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="S3curity H3LIX emblem">
+  <title>S3curity H3LIX</title>
+  <defs>
+    <linearGradient id="hxA" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#29D5E7"/>
+      <stop offset="1" stop-color="#26C6DA"/>
+    </linearGradient>
+    <linearGradient id="hxB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#B55CDB"/>
+      <stop offset="1" stop-color="#29D5E7"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke-linecap="round">
+    <g stroke="#F0F8FF" stroke-opacity="0.55" stroke-width="2.5">
+      <path d="M22 11h20M22 53h20M27 25.5h10M27 38.5h10"/>
+    </g>
+    <path d="M18 32h28" stroke="#F0F8FF" stroke-opacity="0.9" stroke-width="3"/>
+    <path d="M46 6C46 18 18 20 18 32S46 46 46 58" stroke="url(#hxB)" stroke-width="5"/>
+    <path d="M18 6C18 18 46 20 46 32S18 46 18 58" stroke="#081522" stroke-width="9"/>
+    <path d="M18 6C18 18 46 20 46 32S18 46 18 58" stroke="url(#hxA)" stroke-width="5"/>
+  </g>
+</svg>

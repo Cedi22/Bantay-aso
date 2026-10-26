@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting — Bantay Aso</title>
+    <link rel="icon" href="assets/img/bantay-aso-logo.jpg" type="image/jpeg">
+    <script>
+        (async function () {
+            if (window.location.protocol === 'file:') {
+                window.location.replace('qa-dashboard.html');
+                return;
+            }
+            try {
+                const res = await fetch('api/auth.php?action=me', { credentials: 'include' });
+                if (!res.ok) {
+                    window.location.replace('login.php?redirect=qa-dashboard.php');
+                    return;
+                }
+                const data = await res.json();
+                if (!data || !data.authenticated || !data.user) {
+                    window.location.replace('login.php?redirect=qa-dashboard.php');
+                    return;
+                }
+                if (data.password_change_required) {
+                    window.location.replace('change-password.php');
+                    return;
+                }
+                window.location.replace('qa-dashboard.php');
+            } catch (e) {
+                window.location.replace('login.php?redirect=qa-dashboard.php');
+            }
+        })();
+    </script>
+</head>
+<body style="background:#04070d;color:#00e5ff;font-family:'JetBrains Mono',monospace;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;">
+    <div style="text-align:center;">
+        <p style="font-size:1.1rem;letter-spacing:0.05em;">⚡ VERIFYING SECURITY CLEARANCE...</p>
+        <p style="color:#7d93ad;font-size:0.85rem;">Redirecting to authentication or dashboard...</p>
+    </div>
+</body>
+</html>
